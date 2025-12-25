@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on owu</title>
+    <link>https://owu.github.io/categories/</link>
+    <description>Recent content in Categories on owu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Dec 2025 20:00:00 +0800</lastBuildDate><atom:link href="https://owu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang</title>
+      <link>https://owu.github.io/categories/golang/</link>
+      <pubDate>Wed, 24 Dec 2025 20:00:00 +0800</pubDate>
+      
+      <guid>https://owu.github.io/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
