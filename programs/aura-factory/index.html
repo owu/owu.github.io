@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+
+
+
+
+<title>Aura Factory Development Manual | owu</title>
+<link rel="canonical" href="https://owu.github.io/programs/aura-factory/">
+<meta name="description" content="Aura Factory 是一个基于 Rust 语言开发的免费开源桌面音视频转换工具，采用现代化的 GUI 框架 Slint 构建用户界面，利用 FFmpeg 作为底层音视频处理引擎。
+Aura Factory 展示了现代 Rust 桌面应用开发的完整技术栈，结合了高性能的系统编程语言和现代化的 GUI 框架。" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Aura Factory Development Manual | owu" />
+<meta property="og:url" content="https://owu.github.io/programs/aura-factory/" />
+<meta property="og:description" content="Aura Factory 是一个基于 Rust 语言开发的免费开源桌面音视频转换工具，采用现代化的 GUI 框架 Slint 构建用户界面，利用 FFmpeg 作为底层音视频处理引擎。
+Aura Factory 展示了现代 Rust 桌面应用开发的完整技术栈，结合了高性能的系统编程语言和现代化的 GUI 框架。" />
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/icofont/icofont.min.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<script src="/js/copy-code-block.js"></script>
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    </head>
+
+    <body>
+        <header class="header-wrapper">
+    <div class="header">
+        <a class="site-title" href="https://owu.github.io/">owu</a>
+
+        <nav class="menu">
+            
+                <div class="menu-item">
+                    
+                        <a href="/posts/">Posts</a>
+                    
+                </div>
+            
+                <div class="menu-item">
+                    
+                        <a href="/programs/">Programs</a>
+                    
+                </div>
+            
+                <div class="menu-item">
+                    
+                        <a href="/about/">About</a>
+                    
+                </div>
+            
+        </nav>
+    </div>
+</header>
+
+        <main class="main-wrapper">
+            <div class="main">
+                
+
+<section class="single">
+    <h1 class="title">Aura Factory Development Manual</h1>
+
+    <div class="tip">
+        <time datetime="2025-12-25 14:00:00 &#43;0800 CST">2025/12/25</time>
+        <span class="split">·</span>
+        <span> 2261 words </span>
+        <span class="split">·</span>
+        <span>
+            5 minutes to read
+        </span>
+    </div>
+
+    <div class="taxonomies">
+        
+        <div>
+            Categories:
+            
+                <a href="/categories/rust">Rust</a>
+            
+        </div>
+        
+
+        
+            <div>
+                Tags:
+                
+                    <a href="/tags/slint">Slint</a>
+                
+                    <a href="/tags/gui">GUI</a>
+                
+            </div>
+        
+    </div>
+
+    <hr />
+
+    <div class="content">
+        <p>Aura Factory 是一个基于 Rust 语言开发的免费开源桌面音视频转换工具，采用现代化的 GUI 框架 Slint 构建用户界面，利用 FFmpeg 作为底层音视频处理引擎。</p>
+<p>Aura Factory 展示了现代 Rust 桌面应用开发的完整技术栈，结合了高性能的系统编程语言和现代化的 GUI 框架。</p>
+<h2 id="项目概况">项目概况 <a href="#%e9%a1%b9%e7%9b%ae%e6%a6%82%e5%86%b5" class="anchor">🔗</a></h2><h3 id="核心特性">核心特性 <a href="#%e6%a0%b8%e5%bf%83%e7%89%b9%e6%80%a7" class="anchor">🔗</a></h3><ul>
+<li>支持多种音视频格式转换</li>
+<li>提供视频裁剪、分辨率调整、帧率设置等高级功能</li>
+<li>跨平台支持（Windows/Linux）</li>
+<li>实时进度显示和转换状态监控</li>
+<li>版本过期检测机制</li>
+</ul>
+<h2 id="技术架构">技术架构 <a href="#%e6%8a%80%e6%9c%af%e6%9e%b6%e6%9e%84" class="anchor">🔗</a></h2><h3 id="整体架构图">整体架构图 <a href="#%e6%95%b4%e4%bd%93%e6%9e%b6%e6%9e%84%e5%9b%be" class="anchor">🔗</a></h3><pre tabindex="0"><code>┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│    UI 层        │    │   业务逻辑层     │    │    FFmpeg 层    │
+│  (Slint GUI)    │◄──►│  (Rust Core)    │◄──►│  (Sidecar)      │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+</code></pre><h3 id="技术栈">技术栈 <a href="#%e6%8a%80%e6%9c%af%e6%a0%88" class="anchor">🔗</a></h3><ul>
+<li><strong>编程语言</strong>: Rust 2024 Edition</li>
+<li><strong>GUI 框架</strong>: Slint 1.14.1</li>
+<li><strong>音视频处理</strong>: FFmpeg-sidecar 2.3.0</li>
+<li><strong>异步运行时</strong>: Tokio 1.x</li>
+<li><strong>HTTP 客户端</strong>: Reqwest</li>
+<li><strong>文件对话框</strong>: RFD</li>
+<li><strong>序列化</strong>: Serde</li>
+<li><strong>时间处理</strong>: Chrono</li>
+</ul>
+<h2 id="项目结构">项目结构 <a href="#%e9%a1%b9%e7%9b%ae%e7%bb%93%e6%9e%84" class="anchor">🔗</a></h2><pre tabindex="0"><code>aura-factory/
+├── src/                    # Rust 源代码
+│   ├── main.rs            # 应用程序入口点
+│   ├── consts.rs          # 常量定义
+│   ├── conversion.rs      # 转换逻辑
+│   ├── media.rs           # 媒体文件分析
+│   └── utils/
+│       ├── mod.rs         # 工具模块导出
+│       └── time.rs        # 时间相关工具
+├── ui/                    # 用户界面文件
+│   ├── app.slint          # 主界面定义
+│   ├── components/
+│   │   └── components.slint # 自定义组件
+│   └── statics/           # 静态资源
+├── build.rs               # 构建脚本
+├── build.ps1              # Windows 构建脚本
+├── build.sh               # Linux 构建脚本
+└── Cargo.toml            # 项目配置
+</code></pre><h2 id="核心模块详解">核心模块详解 <a href="#%e6%a0%b8%e5%bf%83%e6%a8%a1%e5%9d%97%e8%af%a6%e8%a7%a3" class="anchor">🔗</a></h2><h3 id="1-主程序模块-mainrs">1. 主程序模块 (main.rs) <a href="#1-%e4%b8%bb%e7%a8%8b%e5%ba%8f%e6%a8%a1%e5%9d%97-mainrs" class="anchor">🔗</a></h3><p><strong>主要功能</strong>:</p>
+<ul>
+<li>应用程序初始化和生命周期管理</li>
+<li>用户界面事件处理</li>
+<li>异步任务调度</li>
+<li>版本过期检测</li>
+</ul>
+<p><strong>关键实现</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="cp">#[tokio::main]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">async</span><span class="w"> </span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nb">Result</span><span class="o">&lt;</span><span class="p">(),</span><span class="w"> </span><span class="nb">Box</span><span class="o">&lt;</span><span class="k">dyn</span><span class="w"> </span><span class="n">std</span>::<span class="n">error</span>::<span class="n">Error</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// FFmpeg 自动下载检查
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">ffmpeg_sidecar</span>::<span class="n">download</span>::<span class="n">auto_download</span><span class="p">()</span><span class="o">?</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 创建 Slint 应用实例
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">App</span>::<span class="n">new</span><span class="p">()</span><span class="o">?</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 网络时间获取（用于过期检测）
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">network_timestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arc</span>::<span class="n">new</span><span class="p">(</span><span class="n">AtomicI64</span>::<span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">tokio</span>::<span class="n">spawn</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="k">move</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="n">ts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utils</span>::<span class="n">time</span>::<span class="n">standard_time</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">network_timestamp</span><span class="p">.</span><span class="n">store</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span><span class="w"> </span><span class="n">Ordering</span>::<span class="n">Relaxed</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">});</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 文件选择回调
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="n">on_select_file</span><span class="p">(</span><span class="k">move</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 使用 RFD 打开文件对话框
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FileDialog</span>::<span class="n">new</span><span class="p">().</span><span class="n">pick_file</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// 异步分析媒体文件信息
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">tokio</span>::<span class="n">spawn</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="k">move</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">match</span><span class="w"> </span><span class="n">media</span>::<span class="n">probe_media_info</span><span class="p">(</span><span class="o">&amp;</span><span class="n">path_str</span><span class="p">).</span><span class="k">await</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="nb">Ok</span><span class="p">((</span><span class="n">duration_str</span><span class="p">,</span><span class="w"> </span><span class="n">info_str</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="p">))</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="c1">// 更新 UI 显示
+</span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="n">app</span><span class="p">.</span><span class="n">set_total_duration</span><span class="p">(</span><span class="n">duration_str</span><span class="p">.</span><span class="n">into</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="nb">Err</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* 错误处理 */</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">});</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">});</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="n">run</span><span class="p">()</span><span class="o">?</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nb">Ok</span><span class="p">(())</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h3 id="2-媒体分析模块-mediars">2. 媒体分析模块 (media.rs) <a href="#2-%e5%aa%92%e4%bd%93%e5%88%86%e6%9e%90%e6%a8%a1%e5%9d%97-mediars" class="anchor">🔗</a></h3><p><strong>主要功能</strong>:</p>
+<ul>
+<li>使用 FFprobe 分析媒体文件元数据</li>
+<li>提取视频/音频流信息</li>
+<li>格式化显示信息</li>
+</ul>
+<p><strong>数据结构</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="cp">#[derive(Deserialize, Debug)]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">pub</span><span class="w"> </span><span class="k">struct</span> <span class="nc">ProbeResult</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">format</span>: <span class="nc">Format</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">streams</span>: <span class="nb">Vec</span><span class="o">&lt;</span><span class="n">Stream</span><span class="o">&gt;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#[derive(Deserialize, Debug)]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">pub</span><span class="w"> </span><span class="k">struct</span> <span class="nc">Stream</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">codec_type</span>: <span class="nb">String</span><span class="p">,</span><span class="w">        </span><span class="c1">// &#34;video&#34; 或 &#34;audio&#34;
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">width</span>: <span class="nb">Option</span><span class="o">&lt;</span><span class="kt">i32</span><span class="o">&gt;</span><span class="p">,</span><span class="w">        </span><span class="c1">// 视频宽度
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">height</span>: <span class="nb">Option</span><span class="o">&lt;</span><span class="kt">i32</span><span class="o">&gt;</span><span class="p">,</span><span class="w">       </span><span class="c1">// 视频高度
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">r_frame_rate</span>: <span class="nb">Option</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="c1">// 帧率
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">bit_rate</span>: <span class="nb">Option</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="p">,</span><span class="w">  </span><span class="c1">// 比特率
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">sample_rate</span>: <span class="nb">Option</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="c1">// 音频采样率
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">codec_name</span>: <span class="nb">Option</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="c1">// 编解码器名称
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p><strong>关键函数</strong>:</p>
+<ul>
+<li><code>probe_media_info()</code>: 分析媒体文件并返回格式化信息</li>
+<li><code>get_probe_result()</code>: 执行 FFprobe 命令并解析 JSON 输出</li>
+</ul>
+<h3 id="3-转换处理模块-conversionrs">3. 转换处理模块 (conversion.rs) <a href="#3-%e8%bd%ac%e6%8d%a2%e5%a4%84%e7%90%86%e6%a8%a1%e5%9d%97-conversionrs" class="anchor">🔗</a></h3><p><strong>主要功能</strong>:</p>
+<ul>
+<li>构建和执行 FFmpeg 转换命令</li>
+<li>实时进度监控</li>
+<li>转换取消支持</li>
+</ul>
+<p><strong>核心转换流程</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">pub</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run_conversion</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">input</span>: <span class="nb">String</span><span class="p">,</span><span class="w">          </span><span class="c1">// 输入文件路径
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">format</span>: <span class="nb">String</span><span class="p">,</span><span class="w">         </span><span class="c1">// 输出格式
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">start</span>: <span class="nb">String</span><span class="p">,</span><span class="w">          </span><span class="c1">// 开始时间
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">end</span>: <span class="nb">String</span><span class="p">,</span><span class="w">            </span><span class="c1">// 结束时间
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">v_res</span>: <span class="nb">String</span><span class="p">,</span><span class="w">          </span><span class="c1">// 视频分辨率
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">v_fps</span>: <span class="nb">String</span><span class="p">,</span><span class="w">          </span><span class="c1">// 视频帧率
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">v_bitrate</span>: <span class="nb">String</span><span class="p">,</span><span class="w">      </span><span class="c1">// 视频比特率
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">a_rate</span>: <span class="nb">String</span><span class="p">,</span><span class="w">         </span><span class="c1">// 音频采样率
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">a_bitrate</span>: <span class="nb">String</span><span class="p">,</span><span class="w">      </span><span class="c1">// 音频比特率
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">v_codec</span>: <span class="nb">String</span><span class="p">,</span><span class="w">        </span><span class="c1">// 视频编解码器
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">app_weak</span>: <span class="nc">Weak</span><span class="o">&lt;</span><span class="n">App</span><span class="o">&gt;</span><span class="p">,</span><span class="w">    </span><span class="c1">// UI 弱引用
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">cancel_flag</span>: <span class="nc">Arc</span><span class="o">&lt;</span><span class="n">AtomicBool</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="c1">// 取消标志
+</span></span></span><span class="line"><span class="cl"><span class="p">)</span><span class="w"> </span>-&gt; <span class="nb">Result</span><span class="o">&lt;</span><span class="p">()</span><span class="o">&gt;</span><span class="w">
+</span></span></span></code></pre></div><p><strong>进度监控机制</strong>:</p>
+<ul>
+<li>通过 FFmpeg 的进度事件获取转换进度</li>
+<li>基于预期时长计算百分比</li>
+<li>实时更新 UI 进度条和状态信息</li>
+</ul>
+<h3 id="4-时间工具模块-utilstimers">4. 时间工具模块 (utils/time.rs) <a href="#4-%e6%97%b6%e9%97%b4%e5%b7%a5%e5%85%b7%e6%a8%a1%e5%9d%97-utilstimers" class="anchor">🔗</a></h3><p><strong>主要功能</strong>:</p>
+<ul>
+<li>网络时间同步（用于版本过期检测）</li>
+<li>时间格式转换</li>
+</ul>
+<p><strong>网络时间获取策略</strong>:</p>
+<ul>
+<li>预定义多个国内网站作为时间源</li>
+<li>随机选择并尝试连接</li>
+<li>失败时回退到本地系统时间</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">const</span><span class="w"> </span><span class="no">WEB_URLS</span>: <span class="kp">&amp;</span><span class="p">[</span><span class="n">WebSite</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">WebSite</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">name</span>: <span class="s">&#34;百度&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">url</span>: <span class="s">&#34;http://www.baidu.com&#34;</span><span class="w"> </span><span class="p">},</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">WebSite</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">name</span>: <span class="s">&#34;国家授时中心&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">url</span>: <span class="s">&#34;http://www.ntsc.ac.cn&#34;</span><span class="w"> </span><span class="p">},</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ... 其他网站
+</span></span></span><span class="line"><span class="cl"><span class="p">];</span><span class="w">
+</span></span></span></code></pre></div><h2 id="用户界面设计">用户界面设计 <a href="#%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2%e8%ae%be%e8%ae%a1" class="anchor">🔗</a></h2><h3 id="界面架构">界面架构 <a href="#%e7%95%8c%e9%9d%a2%e6%9e%b6%e6%9e%84" class="anchor">🔗</a></h3><p>采用 Slint 声明式 UI 框架，主要组件包括：</p>
+<ol>
+<li><strong>主窗口 (App)</strong>: 继承自 Window 的基础组件</li>
+<li><strong>卡片组件 (Card)</strong>: 可复用的内容容器</li>
+<li><strong>标签按钮 (TabButton)</strong>: 选项卡切换控件</li>
+</ol>
+<h3 id="界面布局">界面布局 <a href="#%e7%95%8c%e9%9d%a2%e5%b8%83%e5%b1%80" class="anchor">🔗</a></h3><ul>
+<li><strong>顶部</strong>: Logo 和标题区域</li>
+<li><strong>中部</strong>: 选项卡导航（常规/输出设置）</li>
+<li><strong>底部</strong>: 文件选择、转换控制、进度显示</li>
+</ul>
+<h3 id="状态管理">状态管理 <a href="#%e7%8a%b6%e6%80%81%e7%ae%a1%e7%90%86" class="anchor">🔗</a></h3><p>通过 Slint 的 in-out property 机制管理应用状态：</p>
+<ul>
+<li><code>selected-file</code>: 当前选中的文件路径</li>
+<li><code>progress</code>: 转换进度 (0.0-1.0)</li>
+<li><code>is-converting</code>: 是否正在转换</li>
+<li><code>status-message</code>: 状态提示信息</li>
+</ul>
+<h2 id="构建和部署">构建和部署 <a href="#%e6%9e%84%e5%bb%ba%e5%92%8c%e9%83%a8%e7%bd%b2" class="anchor">🔗</a></h2><h3 id="windows-构建">Windows 构建 <a href="#windows-%e6%9e%84%e5%bb%ba" class="anchor">🔗</a></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># 使用 build.ps1 脚本</span>
+</span></span><span class="line"><span class="cl"><span class="p">./</span><span class="n">build</span><span class="p">.</span><span class="py">ps1</span>
+</span></span></code></pre></div><p>构建过程：</p>
+<ol>
+<li>清理之前的构建</li>
+<li>使用 cargo build 编译发布版本</li>
+<li>从 consts.rs 提取版本号</li>
+<li>重命名可执行文件</li>
+</ol>
+<h3 id="linux-构建">Linux 构建 <a href="#linux-%e6%9e%84%e5%bb%ba" class="anchor">🔗</a></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 使用 build.sh 脚本</span>
+</span></span><span class="line"><span class="cl">./build.sh
+</span></span></code></pre></div><p>构建过程：</p>
+<ol>
+<li>创建标准的 Linux 包结构</li>
+<li>生成桌面文件和图标</li>
+<li>创建安装/卸载脚本</li>
+</ol>
+<h3 id="构建配置优化">构建配置优化 <a href="#%e6%9e%84%e5%bb%ba%e9%85%8d%e7%bd%ae%e4%bc%98%e5%8c%96" class="anchor">🔗</a></h3><p>在 Cargo.toml 中配置了优化的发布构建：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">profile</span><span class="p">.</span><span class="nx">release</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">opt-level</span> <span class="p">=</span> <span class="s2">&#34;z&#34;</span>      <span class="c"># 最小化代码大小</span>
+</span></span><span class="line"><span class="cl"><span class="nx">lto</span> <span class="p">=</span> <span class="kc">true</span>          <span class="c"># 链接时优化</span>
+</span></span><span class="line"><span class="cl"><span class="nx">codegen-units</span> <span class="p">=</span> <span class="mi">1</span>   <span class="c"># 单代码生成单元</span>
+</span></span><span class="line"><span class="cl"><span class="nx">strip</span> <span class="p">=</span> <span class="kc">true</span>        <span class="c"># 去除调试符号</span>
+</span></span><span class="line"><span class="cl"><span class="nx">panic</span> <span class="p">=</span> <span class="s2">&#34;abort&#34;</span>     <span class="c"># 异常时直接终止</span>
+</span></span></code></pre></div><h2 id="关键技术特性">关键技术特性 <a href="#%e5%85%b3%e9%94%ae%e6%8a%80%e6%9c%af%e7%89%b9%e6%80%a7" class="anchor">🔗</a></h2><h3 id="1-异步处理架构">1. 异步处理架构 <a href="#1-%e5%bc%82%e6%ad%a5%e5%a4%84%e7%90%86%e6%9e%b6%e6%9e%84" class="anchor">🔗</a></h3><ul>
+<li>使用 Tokio 运行时处理文件分析和转换任务</li>
+<li>UI 线程与后台任务分离，避免界面卡顿</li>
+<li>基于回调的事件驱动模型</li>
+</ul>
+<h3 id="2-错误处理机制">2. 错误处理机制 <a href="#2-%e9%94%99%e8%af%af%e5%a4%84%e7%90%86%e6%9c%ba%e5%88%b6" class="anchor">🔗</a></h3><ul>
+<li>使用 Anyhow 库进行统一的错误处理</li>
+<li>详细的错误信息反馈给用户</li>
+<li>优雅的失败恢复机制</li>
+</ul>
+<h3 id="3-资源管理">3. 资源管理 <a href="#3-%e8%b5%84%e6%ba%90%e7%ae%a1%e7%90%86" class="anchor">🔗</a></h3><ul>
+<li>使用 Arc 和 Atomic 类型进行线程安全的数据共享</li>
+<li>弱引用避免循环引用导致的内存泄漏</li>
+<li>及时的资源释放和清理</li>
+</ul>
+<h3 id="4-跨平台兼容性">4. 跨平台兼容性 <a href="#4-%e8%b7%a8%e5%b9%b3%e5%8f%b0%e5%85%bc%e5%ae%b9%e6%80%a7" class="anchor">🔗</a></h3><ul>
+<li>条件编译处理平台差异（如 Windows 图标资源）</li>
+<li>统一的文件路径处理</li>
+<li>平台特定的构建脚本</li>
+</ul>
+<h2 id="性能优化">性能优化 <a href="#%e6%80%a7%e8%83%bd%e4%bc%98%e5%8c%96" class="anchor">🔗</a></h2><h3 id="构建优化">构建优化 <a href="#%e6%9e%84%e5%bb%ba%e4%bc%98%e5%8c%96" class="anchor">🔗</a></h3><ul>
+<li>启用 LTO（链接时优化）减小二进制大小</li>
+<li>使用最小化优化级别 (-Oz)</li>
+<li>去除调试符号和冗余代码</li>
+</ul>
+<h3 id="运行时优化">运行时优化 <a href="#%e8%bf%90%e8%a1%8c%e6%97%b6%e4%bc%98%e5%8c%96" class="anchor">🔗</a></h3><ul>
+<li>异步任务避免阻塞 UI 线程</li>
+<li>合理的内存分配和释放</li>
+<li>高效的字符串处理</li>
+</ul>
+<h2 id="安全考虑">安全考虑 <a href="#%e5%ae%89%e5%85%a8%e8%80%83%e8%99%91" class="anchor">🔗</a></h2><h3 id="输入验证">输入验证 <a href="#%e8%be%93%e5%85%a5%e9%aa%8c%e8%af%81" class="anchor">🔗</a></h3><ul>
+<li>文件路径安全性检查</li>
+<li>时间格式有效性验证</li>
+<li>参数边界检查</li>
+</ul>
+<h3 id="资源访问">资源访问 <a href="#%e8%b5%84%e6%ba%90%e8%ae%bf%e9%97%ae" class="anchor">🔗</a></h3><ul>
+<li>文件读写权限控制</li>
+<li>网络请求超时设置</li>
+<li>内存安全保证（Rust 所有权系统）</li>
+</ul>
+<h2 id="扩展性设计">扩展性设计 <a href="#%e6%89%a9%e5%b1%95%e6%80%a7%e8%ae%be%e8%ae%a1" class="anchor">🔗</a></h2><h3 id="模块化架构">模块化架构 <a href="#%e6%a8%a1%e5%9d%97%e5%8c%96%e6%9e%b6%e6%9e%84" class="anchor">🔗</a></h3><ul>
+<li>清晰的模块边界和职责分离</li>
+<li>易于添加新的文件格式支持</li>
+<li>可扩展的转换参数配置</li>
+</ul>
+<h3 id="配置化设计">配置化设计 <a href="#%e9%85%8d%e7%bd%ae%e5%8c%96%e8%ae%be%e8%ae%a1" class="anchor">🔗</a></h3><ul>
+<li>常量集中管理便于维护</li>
+<li>构建过程参数化</li>
+<li>界面元素可配置</li>
+</ul>
+<h2 id="已知限制和未来改进">已知限制和未来改进 <a href="#%e5%b7%b2%e7%9f%a5%e9%99%90%e5%88%b6%e5%92%8c%e6%9c%aa%e6%9d%a5%e6%94%b9%e8%bf%9b" class="anchor">🔗</a></h2><h3 id="当前限制">当前限制 <a href="#%e5%bd%93%e5%89%8d%e9%99%90%e5%88%b6" class="anchor">🔗</a></h3><ol>
+<li>依赖外部 FFmpeg 二进制文件</li>
+<li>转换参数配置相对基础</li>
+<li>批量处理支持有限</li>
+</ol>
+<h3 id="改进方向">改进方向 <a href="#%e6%94%b9%e8%bf%9b%e6%96%b9%e5%90%91" class="anchor">🔗</a></h3><ol>
+<li>集成更多音视频处理功能</li>
+<li>添加预设配置模板</li>
+<li>支持批量文件处理</li>
+<li>增强错误恢复和重试机制</li>
+</ol>
+<h2 id="总结">总结 <a href="#%e6%80%bb%e7%bb%93" class="anchor">🔗</a></h2><p>项目采用了合理的架构设计，具有良好的可维护性和扩展性。通过详细的代码分析和模块化设计，为后续的功能扩展奠定了坚实的基础。</p>
+<h2 id="许可证">许可证 <a href="#%e8%ae%b8%e5%8f%af%e8%af%81" class="anchor">🔗</a></h2><p><a href="LICENSE">GNU GPL v3 License</a></p>
+<h2 id="贡献">贡献 <a href="#%e8%b4%a1%e7%8c%ae" class="anchor">🔗</a></h2><p>欢迎提交Issue和Pull Request！</p>
+<h2 id="联系方式">联系方式 <a href="#%e8%81%94%e7%b3%bb%e6%96%b9%e5%bc%8f" class="anchor">🔗</a></h2><p>项目地址：<a href="https://github.com/owu/aura-factory">https://github.com/owu/aura-factory</a></p>
+
+    </div>
+
+    
+</section>
+
+
+            </div>
+            <div class="side">
+                
+                    <div class="side-recent">
+    <h2 class="side-title">
+        <a href="/posts/">Recent Posts</a>
+    </h2>
+    <hr />
+
+    <ul>
+        
+    </ul>
+</div>
+
+                
+                    <div class="side-recent">
+    <h2 class="side-title">
+        <a href="/programs/">Recent Programs</a>
+    </h2>
+    <hr />
+
+    <ul>
+        
+            <li>
+                <a href="/programs/aura-factory/">Aura Factory Development Manual</a>
+            </li>
+        
+            <li>
+                <a href="/programs/share-sniffer/">Share Sniffer Development Manual</a>
+            </li>
+        
+    </ul>
+</div>
+
+                
+                <div class="side-categories">
+    <h2>Categories</h2>
+    <hr />
+
+    <ul>
+        
+            <li>
+                <a href="/categories/golang">golang(1)</a>
+            </li>
+        
+            <li>
+                <a href="/categories/rust">rust(1)</a>
+            </li>
+        
+    </ul>
+</div>
+
+                <div class="side-tags">
+    <h2>Tags</h2>
+    <hr />
+
+    <ul>
+        
+            <li>
+                <a href="/tags/fyne">fyne (1)</a>
+            </li>
+        
+            <li>
+                <a href="/tags/gui">gui (2)</a>
+            </li>
+        
+            <li>
+                <a href="/tags/slint">slint (1)</a>
+            </li>
+        
+    </ul>
+</div>
+
+            </div>
+        </main>
+        <footer class="footer">
+    <div class="footer-row">
+        
+            
+            
+                <a class="footer-item" href="https://owu.github.io/posts/index.xml">
+                    Feed of Posts
+                    <i class="icofont-rss"></i>
+                </a>
+            
+        
+            
+            
+                <a class="footer-item" href="https://owu.github.io/programs/index.xml">
+                    Feed of Programs
+                    <i class="icofont-rss"></i>
+                </a>
+            
+        
+
+        
+            
+            
+        
+    </div>
+
+    
+        <div class="footer-row">
+            
+                
+                    <span class="footer-item">Copyright {at} 2025-2026</span>
+                
+            
+        </div>
+    
+        <div class="footer-row">
+            
+                
+                    <span class="footer-item">Powered by hugo,Theme by flat.</span>
+                
+            
+        </div>
+    
+</footer>
+
+    </body>
+</html>

@@ -6,7 +6,16 @@
     <description>Recent content in Categories on owu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Dec 2025 20:00:00 +0800</lastBuildDate><atom:link href="https://owu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Dec 2025 14:00:00 +0800</lastBuildDate><atom:link href="https://owu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rust</title>
+      <link>https://owu.github.io/categories/rust/</link>
+      <pubDate>Thu, 25 Dec 2025 14:00:00 +0800</pubDate>
+      
+      <guid>https://owu.github.io/categories/rust/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Golang</title>
       <link>https://owu.github.io/categories/golang/</link>

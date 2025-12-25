@@ -14,7 +14,7 @@
       
       <guid>https://owu.github.io/programs/share-sniffer/</guid>
       <description>&lt;p&gt;Share Sniffer（分享嗅探器）是一款跨平台的网盘分享链接检测工具，支持多种主流网盘的分享链接有效性检测。该工具提供了直观的图形界面（GUI）和便捷的命令行界面（CLI），方便用户根据需求选择使用方式。&lt;/p&gt;
-&lt;h2 id=&#34;1-项目概述&#34;&gt;1. 项目概述 &lt;a href=&#34;#1-%e9%a1%b9%e7%9b%ae%e6%a6%82%e8%bf%b0&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;11-支持的网盘类型&#34;&gt;1.1 支持的网盘类型 &lt;a href=&#34;#11-%e6%94%af%e6%8c%81%e7%9a%84%e7%bd%91%e7%9b%98%e7%b1%bb%e5%9e%8b&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&#34;1-项目概况&#34;&gt;1. 项目概况 &lt;a href=&#34;#1-%e9%a1%b9%e7%9b%ae%e6%a6%82%e5%86%b5&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;11-支持的网盘类型&#34;&gt;1.1 支持的网盘类型 &lt;a href=&#34;#11-%e6%94%af%e6%8c%81%e7%9a%84%e7%bd%91%e7%9b%98%e7%b1%bb%e5%9e%8b&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;✅ 夸克网盘&lt;/li&gt;
 &lt;li&gt;✅ 天翼云盘&lt;/li&gt;
 &lt;li&gt;✅ 百度网盘&lt;/li&gt;
