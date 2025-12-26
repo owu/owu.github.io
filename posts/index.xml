@@ -7,5 +7,163 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 May 2022 11:22:44 +0800</lastBuildDate><atom:link href="https://owu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo static blog deployment script</title>
+      <link>https://owu.github.io/posts/hugo-deploy/</link>
+      <pubDate>Fri, 26 Dec 2025 20:00:00 +0800</pubDate>
+      
+      <guid>https://owu.github.io/posts/hugo-deploy/</guid>
+      <description>&lt;p&gt;这两个部署脚本提供了一个完整的 Hugo 博客自动化部署解决方案。通过清晰的步骤划分、完善的错误处理和跨平台支持，用户可以轻松地将本地 Hugo 项目部署到 GitHub Pages。&lt;/p&gt;
+&lt;p&gt;脚本采用双仓库策略：&lt;strong&gt;私有仓库&lt;/strong&gt;存放 Hugo 源代码，&lt;strong&gt;公有仓库&lt;/strong&gt;只存放生成的静态文件，确保源代码安全的同时实现自动化部署。&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;attachment&#34;&gt;
+  
+    &lt;span&gt;📎&lt;/span&gt;
+  
+  &lt;a href=&#34;https://owu.github.io/posts/hugo-deploy/deploy.sh&#34; download&gt;Linux/macOS 部署脚本&lt;/a&gt;
+  &lt;small&gt;(deploy.sh)&lt;/small&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class=&#34;attachment&#34;&gt;
+  
+    &lt;span&gt;📎&lt;/span&gt;
+  
+  &lt;a href=&#34;https://owu.github.io/posts/hugo-deploy/deploy.ps1&#34; download&gt;Windows 部署脚本&lt;/a&gt;
+  &lt;small&gt;(deploy.ps1)&lt;/small&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;环境配置&#34;&gt;环境配置 &lt;a href=&#34;#%e7%8e%af%e5%a2%83%e9%85%8d%e7%bd%ae&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;仓库设置&#34;&gt;仓库设置 &lt;a href=&#34;#%e4%bb%93%e5%ba%93%e8%ae%be%e7%bd%ae&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;采用双仓库策略：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SRC_DIR (Hugo 项目目录)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;私有仓库，包含 Hugo 源代码和配置文件&lt;/li&gt;
+&lt;li&gt;仓库名称示例：&lt;code&gt;owu.github.com&lt;/code&gt;（可自定义）&lt;/li&gt;
+&lt;li&gt;包含 &lt;code&gt;config.toml&lt;/code&gt;、&lt;code&gt;content/&lt;/code&gt;、&lt;code&gt;themes/&lt;/code&gt; 等 Hugo 项目文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;DST_DIR (GitHub Pages 目录)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;公有仓库，只包含 Hugo 生成的静态文件&lt;/li&gt;
+&lt;li&gt;仓库名称格式：&lt;code&gt;username.github.io&lt;/code&gt;（GitHub Pages 要求）&lt;/li&gt;
+&lt;li&gt;通过 GitHub Pages 公开访问&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;路径配置&#34;&gt;路径配置 &lt;a href=&#34;#%e8%b7%af%e5%be%84%e9%85%8d%e7%bd%ae&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;使用前需根据实际环境修改脚本中的路径变量：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;deploy.ps1 (Windows):&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$SRC_DIR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;D:\develop\owu.github.com&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$DST_DIR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;D:\develop\owu.github.io&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;deploy.sh (Linux):&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;SRC_DIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/develop/owu.github.com&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;DST_DIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/develop/owu.github.io&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;环境要求&#34;&gt;环境要求 &lt;a href=&#34;#%e7%8e%af%e5%a2%83%e8%a6%81%e6%b1%82&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Git 版本控制工具&lt;/li&gt;
+&lt;li&gt;Hugo 静态网站生成器&lt;/li&gt;
+&lt;li&gt;对两个仓库的读写权限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;部署流程&#34;&gt;部署流程 &lt;a href=&#34;#%e9%83%a8%e7%bd%b2%e6%b5%81%e7%a8%8b&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;脚本自动完成以下9个步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;更新源代码仓库&lt;/strong&gt; - 切换到 main 分支，拉取最新代码&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;生成静态文件&lt;/strong&gt; - 执行 &lt;code&gt;hugo build&lt;/code&gt; 生成静态文件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;导出干净文件&lt;/strong&gt; - 使用 &lt;code&gt;git archive&lt;/code&gt; 导出版本控制的文件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;更新目标仓库&lt;/strong&gt; - 切换到 GitHub Pages 仓库并拉取最新代码&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;清理目标目录&lt;/strong&gt; - 删除除 &lt;code&gt;.git&lt;/code&gt; 文件夹外的所有内容&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;复制静态文件&lt;/strong&gt; - 将生成的静态文件复制到目标目录&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;清理临时文件&lt;/strong&gt; - 删除临时创建的目录&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;提交推送更改&lt;/strong&gt; - 提交并推送到远程仓库&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;返回原始目录&lt;/strong&gt; - 切换回源代码目录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;两个脚本功能相同，主要差异在：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;特性&lt;/th&gt;
+          &lt;th&gt;deploy.ps1 (Windows)&lt;/th&gt;
+          &lt;th&gt;deploy.sh (Linux)&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;路径格式&lt;/td&gt;
+          &lt;td&gt;Windows 格式 (&lt;code&gt;D:\&lt;/code&gt;)&lt;/td&gt;
+          &lt;td&gt;Unix 格式 (&lt;code&gt;/&lt;/code&gt;)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;命令语法&lt;/td&gt;
+          &lt;td&gt;PowerShell 命令&lt;/td&gt;
+          &lt;td&gt;Bash 命令&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;临时目录&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;New-TemporaryFile&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;mktemp -d&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;错误检查&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;$LASTEXITCODE&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;$?&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;文件操作&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;Get-ChildItem&lt;/code&gt;, &lt;code&gt;Remove-Item&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;find&lt;/code&gt;, &lt;code&gt;rm&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;两个脚本都提供完善的错误处理和详细执行日志。&lt;/p&gt;
+&lt;h2 id=&#34;使用方法&#34;&gt;使用方法 &lt;a href=&#34;#%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;windows-环境&#34;&gt;Windows 环境 &lt;a href=&#34;#windows-%e7%8e%af%e5%a2%83&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# 进入 Hugo 项目目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;D:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;develop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;owu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;github&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# 执行部署脚本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;.\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;deploy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;ps1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;linuxunix-环境&#34;&gt;Linux/Unix 环境 &lt;a href=&#34;#linuxunix-%e7%8e%af%e5%a2%83&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 进入 Hugo 项目目录  &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /home/develop/owu.github.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 给脚本添加执行权限&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod +x deploy.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 执行部署脚本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./deploy.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;执行后观察脚本输出的进度信息，绿色表示成功，红色表示错误。&lt;/p&gt;
+&lt;h2 id=&#34;常见问题&#34;&gt;常见问题 &lt;a href=&#34;#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;部署失败原因&#34;&gt;部署失败原因 &lt;a href=&#34;#%e9%83%a8%e7%bd%b2%e5%a4%b1%e8%b4%a5%e5%8e%9f%e5%9b%a0&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Git 相关错误&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;切换分支失败&lt;/strong&gt;: 当前分支有未提交的更改 → 提交或暂存所有更改&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;拉取代码失败&lt;/strong&gt;: 网络连接问题或远程仓库不可达 → 检查网络和远程仓库配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Hugo 相关错误&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;生成失败&lt;/strong&gt;: Hugo 配置错误或缺少依赖 → 运行 &lt;code&gt;hugo server&lt;/code&gt; 测试本地生成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;路径相关错误&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;目录不存在或权限不足&lt;/strong&gt;: 路径配置错误或权限问题 → 检查路径和权限设置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;调试技巧&#34;&gt;调试技巧 &lt;a href=&#34;#%e8%b0%83%e8%af%95%e6%8a%80%e5%b7%a7&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;手动测试&lt;/strong&gt;: &lt;code&gt;hugo build&lt;/code&gt; 测试生成，&lt;code&gt;git status&lt;/code&gt; 检查 Git 状态&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;检查临时文件&lt;/strong&gt;: 脚本失败时保留临时目录用于调试&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;查看详细日志&lt;/strong&gt;: 关注红色错误信息定位问题&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;注意事项&#34;&gt;注意事项 &lt;a href=&#34;#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;执行前确保所有更改已提交到源代码仓库&lt;/li&gt;
+&lt;li&gt;脚本会强制重置本地更改，确保与远程仓库一致&lt;/li&gt;
+&lt;li&gt;目标仓库的 &lt;code&gt;.git&lt;/code&gt; 目录会被保留，其他内容会被完全替换&lt;/li&gt;
+&lt;li&gt;建议在部署前先进行本地测试（&lt;code&gt;hugo server&lt;/code&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结 &lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;主要优势：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🚀 完全自动化部署流程&lt;/li&gt;
+&lt;li&gt;🔒 安全的双仓库策略，保护源代码&lt;/li&gt;
+&lt;li&gt;💻 跨平台兼容性（Windows/Linux）&lt;/li&gt;
+&lt;li&gt;🐛 完善的错误处理和调试信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;使用建议：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首次使用前仔细阅读配置说明&lt;/li&gt;
+&lt;li&gt;按照环境配置设置正确的仓库和路径&lt;/li&gt;
+&lt;li&gt;遇到问题时参考常见问题部分&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;最后更新: 2025-12-26&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

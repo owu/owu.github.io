@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+
+
+
+
+<title>Hugo static blog deployment script | owu</title>
+<link rel="canonical" href="https://owu.github.io/posts/hugo-deploy/">
+<meta name="description" content="这两个部署脚本提供了一个完整的 Hugo 博客自动化部署解决方案。通过清晰的步骤划分、完善的错误处理和跨平台支持，用户可以轻松地将本地 Hugo 项目部署到 GitHub Pages。" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Hugo static blog deployment script | owu" />
+<meta property="og:url" content="https://owu.github.io/posts/hugo-deploy/" />
+<meta property="og:description" content="这两个部署脚本提供了一个完整的 Hugo 博客自动化部署解决方案。通过清晰的步骤划分、完善的错误处理和跨平台支持，用户可以轻松地将本地 Hugo 项目部署到 GitHub Pages。" />
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/icofont/icofont.min.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<script src="/js/copy-code-block.js"></script>
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    </head>
+
+    <body>
+        <header class="header-wrapper">
+    <div class="header">
+        <a class="site-title" href="https://owu.github.io/">owu</a>
+
+        <nav class="menu">
+            
+                <div class="menu-item">
+                    
+                        <a href="/posts/">Posts</a>
+                    
+                </div>
+            
+                <div class="menu-item">
+                    
+                        <a href="/programs/">Programs</a>
+                    
+                </div>
+            
+                <div class="menu-item">
+                    
+                        <a href="/about/">About</a>
+                    
+                </div>
+            
+        </nav>
+    </div>
+</header>
+
+        <main class="main-wrapper">
+            <div class="main">
+                
+
+<section class="single">
+    <h1 class="title">Hugo static blog deployment script</h1>
+
+    <div class="tip">
+        <time datetime="2025-12-26 20:00:00 &#43;0800 CST">2025/12/26</time>
+        <span class="split">·</span>
+        <span> 1180 words </span>
+        <span class="split">·</span>
+        <span>
+            3 minutes to read
+        </span>
+    </div>
+
+    <div class="taxonomies">
+        
+
+        
+    </div>
+
+    <hr />
+
+    <div class="content">
+        <p>这两个部署脚本提供了一个完整的 Hugo 博客自动化部署解决方案。通过清晰的步骤划分、完善的错误处理和跨平台支持，用户可以轻松地将本地 Hugo 项目部署到 GitHub Pages。</p>
+<p>脚本采用双仓库策略：<strong>私有仓库</strong>存放 Hugo 源代码，<strong>公有仓库</strong>只存放生成的静态文件，确保源代码安全的同时实现自动化部署。</p>
+<p>
+
+<div class="attachment">
+  
+    <span>📎</span>
+  
+  <a href="/posts/hugo-deploy/deploy.sh" download>Linux/macOS 部署脚本</a>
+  <small>(deploy.sh)</small>
+</div>
+
+
+
+<div class="attachment">
+  
+    <span>📎</span>
+  
+  <a href="/posts/hugo-deploy/deploy.ps1" download>Windows 部署脚本</a>
+  <small>(deploy.ps1)</small>
+</div>
+</p>
+<h2 id="环境配置">环境配置 <a href="#%e7%8e%af%e5%a2%83%e9%85%8d%e7%bd%ae" class="anchor">🔗</a></h2><h3 id="仓库设置">仓库设置 <a href="#%e4%bb%93%e5%ba%93%e8%ae%be%e7%bd%ae" class="anchor">🔗</a></h3><p>采用双仓库策略：</p>
+<p><strong>SRC_DIR (Hugo 项目目录)</strong></p>
+<ul>
+<li>私有仓库，包含 Hugo 源代码和配置文件</li>
+<li>仓库名称示例：<code>owu.github.com</code>（可自定义）</li>
+<li>包含 <code>config.toml</code>、<code>content/</code>、<code>themes/</code> 等 Hugo 项目文件</li>
+</ul>
+<p><strong>DST_DIR (GitHub Pages 目录)</strong></p>
+<ul>
+<li>公有仓库，只包含 Hugo 生成的静态文件</li>
+<li>仓库名称格式：<code>username.github.io</code>（GitHub Pages 要求）</li>
+<li>通过 GitHub Pages 公开访问</li>
+</ul>
+<h3 id="路径配置">路径配置 <a href="#%e8%b7%af%e5%be%84%e9%85%8d%e7%bd%ae" class="anchor">🔗</a></h3><p>使用前需根据实际环境修改脚本中的路径变量：</p>
+<p><strong>deploy.ps1 (Windows):</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$SRC_DIR</span> <span class="p">=</span> <span class="s2">&#34;D:\develop\owu.github.com&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$DST_DIR</span> <span class="p">=</span> <span class="s2">&#34;D:\develop\owu.github.io&#34;</span>
+</span></span></code></pre></div><p><strong>deploy.sh (Linux):</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">SRC_DIR</span><span class="o">=</span><span class="s2">&#34;/home/develop/owu.github.com&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DST_DIR</span><span class="o">=</span><span class="s2">&#34;/home/develop/owu.github.io&#34;</span>
+</span></span></code></pre></div><h3 id="环境要求">环境要求 <a href="#%e7%8e%af%e5%a2%83%e8%a6%81%e6%b1%82" class="anchor">🔗</a></h3><ul>
+<li>Git 版本控制工具</li>
+<li>Hugo 静态网站生成器</li>
+<li>对两个仓库的读写权限</li>
+</ul>
+<h2 id="部署流程">部署流程 <a href="#%e9%83%a8%e7%bd%b2%e6%b5%81%e7%a8%8b" class="anchor">🔗</a></h2><p>脚本自动完成以下9个步骤：</p>
+<ol>
+<li><strong>更新源代码仓库</strong> - 切换到 main 分支，拉取最新代码</li>
+<li><strong>生成静态文件</strong> - 执行 <code>hugo build</code> 生成静态文件</li>
+<li><strong>导出干净文件</strong> - 使用 <code>git archive</code> 导出版本控制的文件</li>
+<li><strong>更新目标仓库</strong> - 切换到 GitHub Pages 仓库并拉取最新代码</li>
+<li><strong>清理目标目录</strong> - 删除除 <code>.git</code> 文件夹外的所有内容</li>
+<li><strong>复制静态文件</strong> - 将生成的静态文件复制到目标目录</li>
+<li><strong>清理临时文件</strong> - 删除临时创建的目录</li>
+<li><strong>提交推送更改</strong> - 提交并推送到远程仓库</li>
+<li><strong>返回原始目录</strong> - 切换回源代码目录</li>
+</ol>
+<p>两个脚本功能相同，主要差异在：</p>
+<table>
+  <thead>
+      <tr>
+          <th>特性</th>
+          <th>deploy.ps1 (Windows)</th>
+          <th>deploy.sh (Linux)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>路径格式</td>
+          <td>Windows 格式 (<code>D:\</code>)</td>
+          <td>Unix 格式 (<code>/</code>)</td>
+      </tr>
+      <tr>
+          <td>命令语法</td>
+          <td>PowerShell 命令</td>
+          <td>Bash 命令</td>
+      </tr>
+      <tr>
+          <td>临时目录</td>
+          <td><code>New-TemporaryFile</code></td>
+          <td><code>mktemp -d</code></td>
+      </tr>
+      <tr>
+          <td>错误检查</td>
+          <td><code>$LASTEXITCODE</code></td>
+          <td><code>$?</code></td>
+      </tr>
+      <tr>
+          <td>文件操作</td>
+          <td><code>Get-ChildItem</code>, <code>Remove-Item</code></td>
+          <td><code>find</code>, <code>rm</code></td>
+      </tr>
+  </tbody>
+</table>
+<p>两个脚本都提供完善的错误处理和详细执行日志。</p>
+<h2 id="使用方法">使用方法 <a href="#%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95" class="anchor">🔗</a></h2><h3 id="windows-环境">Windows 环境 <a href="#windows-%e7%8e%af%e5%a2%83" class="anchor">🔗</a></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># 进入 Hugo 项目目录</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd </span><span class="n">D:</span><span class="p">\</span><span class="n">develop</span><span class="p">\</span><span class="n">owu</span><span class="p">.</span><span class="py">github</span><span class="p">.</span><span class="py">com</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 执行部署脚本</span>
+</span></span><span class="line"><span class="cl"><span class="p">.\</span><span class="n">deploy</span><span class="p">.</span><span class="py">ps1</span>
+</span></span></code></pre></div><h3 id="linuxunix-环境">Linux/Unix 环境 <a href="#linuxunix-%e7%8e%af%e5%a2%83" class="anchor">🔗</a></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 进入 Hugo 项目目录  </span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /home/develop/owu.github.com
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 给脚本添加执行权限</span>
+</span></span><span class="line"><span class="cl">chmod +x deploy.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 执行部署脚本</span>
+</span></span><span class="line"><span class="cl">./deploy.sh
+</span></span></code></pre></div><p>执行后观察脚本输出的进度信息，绿色表示成功，红色表示错误。</p>
+<h2 id="常见问题">常见问题 <a href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98" class="anchor">🔗</a></h2><h3 id="部署失败原因">部署失败原因 <a href="#%e9%83%a8%e7%bd%b2%e5%a4%b1%e8%b4%a5%e5%8e%9f%e5%9b%a0" class="anchor">🔗</a></h3><p><strong>Git 相关错误</strong></p>
+<ul>
+<li><strong>切换分支失败</strong>: 当前分支有未提交的更改 → 提交或暂存所有更改</li>
+<li><strong>拉取代码失败</strong>: 网络连接问题或远程仓库不可达 → 检查网络和远程仓库配置</li>
+</ul>
+<p><strong>Hugo 相关错误</strong></p>
+<ul>
+<li><strong>生成失败</strong>: Hugo 配置错误或缺少依赖 → 运行 <code>hugo server</code> 测试本地生成</li>
+</ul>
+<p><strong>路径相关错误</strong></p>
+<ul>
+<li><strong>目录不存在或权限不足</strong>: 路径配置错误或权限问题 → 检查路径和权限设置</li>
+</ul>
+<h3 id="调试技巧">调试技巧 <a href="#%e8%b0%83%e8%af%95%e6%8a%80%e5%b7%a7" class="anchor">🔗</a></h3><ol>
+<li><strong>手动测试</strong>: <code>hugo build</code> 测试生成，<code>git status</code> 检查 Git 状态</li>
+<li><strong>检查临时文件</strong>: 脚本失败时保留临时目录用于调试</li>
+<li><strong>查看详细日志</strong>: 关注红色错误信息定位问题</li>
+</ol>
+<h2 id="注意事项">注意事项 <a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="anchor">🔗</a></h2><ul>
+<li>执行前确保所有更改已提交到源代码仓库</li>
+<li>脚本会强制重置本地更改，确保与远程仓库一致</li>
+<li>目标仓库的 <code>.git</code> 目录会被保留，其他内容会被完全替换</li>
+<li>建议在部署前先进行本地测试（<code>hugo server</code>）</li>
+</ul>
+<h2 id="总结">总结 <a href="#%e6%80%bb%e7%bb%93" class="anchor">🔗</a></h2><p><strong>主要优势：</strong></p>
+<ul>
+<li>🚀 完全自动化部署流程</li>
+<li>🔒 安全的双仓库策略，保护源代码</li>
+<li>💻 跨平台兼容性（Windows/Linux）</li>
+<li>🐛 完善的错误处理和调试信息</li>
+</ul>
+<p><strong>使用建议：</strong></p>
+<ol>
+<li>首次使用前仔细阅读配置说明</li>
+<li>按照环境配置设置正确的仓库和路径</li>
+<li>遇到问题时参考常见问题部分</li>
+</ol>
+<p><em>最后更新: 2025-12-26</em></p>
+
+    </div>
+
+    
+</section>
+
+
+            </div>
+            <div class="side">
+                
+                    <div class="side-recent">
+    <h2 class="side-title">
+        <a href="/posts/">Recent Posts</a>
+    </h2>
+    <hr />
+
+    <ul>
+        
+            <li>
+                <a href="/posts/hugo-deploy/">Hugo static blog deployment script</a>
+            </li>
+        
+    </ul>
+</div>
+
+                
+                    <div class="side-recent">
+    <h2 class="side-title">
+        <a href="/programs/">Recent Programs</a>
+    </h2>
+    <hr />
+
+    <ul>
+        
+            <li>
+                <a href="/programs/aura-factory/">Aura Factory Development Manual</a>
+            </li>
+        
+            <li>
+                <a href="/programs/share-sniffer/">Share Sniffer Development Manual</a>
+            </li>
+        
+    </ul>
+</div>
+
+                
+                <div class="side-categories">
+    <h2>Categories</h2>
+    <hr />
+
+    <ul>
+        
+            <li>
+                <a href="/categories/golang">golang(1)</a>
+            </li>
+        
+            <li>
+                <a href="/categories/rust">rust(1)</a>
+            </li>
+        
+    </ul>
+</div>
+
+                <div class="side-tags">
+    <h2>Tags</h2>
+    <hr />
+
+    <ul>
+        
+            <li>
+                <a href="/tags/fyne">fyne (1)</a>
+            </li>
+        
+            <li>
+                <a href="/tags/gui">gui (2)</a>
+            </li>
+        
+            <li>
+                <a href="/tags/slint">slint (1)</a>
+            </li>
+        
+    </ul>
+</div>
+
+            </div>
+        </main>
+        <footer class="footer">
+    <div class="footer-row">
+        
+            
+            
+                <a class="footer-item" href="https://owu.github.io/posts/index.xml">
+                    Feed of Posts
+                    <i class="icofont-rss"></i>
+                </a>
+            
+        
+            
+            
+                <a class="footer-item" href="https://owu.github.io/programs/index.xml">
+                    Feed of Programs
+                    <i class="icofont-rss"></i>
+                </a>
+            
+        
+
+        
+            
+            
+        
+    </div>
+
+    
+        <div class="footer-row">
+            
+                
+                    <span class="footer-item">Copyright {at} 2025-2026</span>
+                
+            
+        </div>
+    
+        <div class="footer-row">
+            
+                
+                    <span class="footer-item">Powered by hugo,Theme by flat.</span>
+                
+            
+        </div>
+    
+</footer>
+
+    </body>
+</html>
