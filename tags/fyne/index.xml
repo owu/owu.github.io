@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fyne on owu</title>
+    <title>Fyne on owu.github.io</title>
     <link>https://owu.github.io/tags/fyne/</link>
-    <description>Recent content in Fyne on owu</description>
+    <description>Recent content in Fyne on owu.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <lastBuildDate>Wed, 24 Dec 2025 20:00:00 +0800</lastBuildDate><atom:link href="https://owu.github.io/tags/fyne/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Share Sniffer Development Manual</title>
