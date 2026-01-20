@@ -6,7 +6,46 @@
     <description>Recent content in Rust on owu.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 25 Dec 2025 14:00:00 +0800</lastBuildDate><atom:link href="https://owu.github.io/categories/rust/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Jan 2026 15:00:00 +0800</lastBuildDate><atom:link href="https://owu.github.io/categories/rust/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A modern WSL instance management tool</title>
+      <link>https://owu.github.io/programs/wsl-dashboard/</link>
+      <pubDate>Tue, 20 Jan 2026 15:00:00 +0800</pubDate>
+      
+      <guid>https://owu.github.io/programs/wsl-dashboard/</guid>
+      <description>&lt;p&gt;WSL Dashboard是一款基于Rust和Slint构建的现代、高性能且轻量级的WSL (Windows Subsystem for Linux) 实例管理面板，为用户提供高级的原生体验。
+使用时，用户可以轻松管理现有发行版、创建新实例、备份恢复数据、迁移存储位置，并实时监控WSL状态和存储使用情况。&lt;/p&gt;
+&lt;h2 id=&#34;核心功能&#34;&gt;核心功能 &lt;a href=&#34;#%e6%a0%b8%e5%bf%83%e5%8a%9f%e8%83%bd&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;直观的GUI界面&lt;/strong&gt;：支持暗黑模式和流畅的动画效果&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;全面的WSL实例管理&lt;/strong&gt;：一键启动、停止、终止、注销所有WSL发行版&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;快速访问工具&lt;/strong&gt;：直接打开终端、VS Code和文件资源管理器&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;状态实时监控&lt;/strong&gt;：动态显示WSL实例运行状态&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;备份与恢复&lt;/strong&gt;：支持导出为.tar或.tar.gz格式，从备份导入或克隆实例&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;存储管理&lt;/strong&gt;：支持VHDX迁移到其他磁盘，节省C盘空间&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智能安装&lt;/strong&gt;：从Microsoft Store或GitHub安装发行版&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RootFS辅助工具&lt;/strong&gt;：内置RootFS下载功能，便于手动安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;技术特点&#34;&gt;技术特点 &lt;a href=&#34;#%e6%8a%80%e6%9c%af%e7%89%b9%e7%82%b9&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;高性能&lt;/strong&gt;：基于Rust语言，确保内存安全和零成本抽象&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;现代化UI&lt;/strong&gt;：采用Slint框架，提供GPU加速的流畅界面&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;低资源占用&lt;/strong&gt;：典型内存占用仅60-80MB，启动速度快&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多语言支持&lt;/strong&gt;：支持14种语言的完整国际化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;便携式应用&lt;/strong&gt;：单文件可执行程序，无需安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;系统要求&#34;&gt;系统要求 &lt;a href=&#34;#%e7%b3%bb%e7%bb%9f%e8%a6%81%e6%b1%82&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;启用了WSL的Windows 10或Windows 11（推荐WSL 2）&lt;/li&gt;
+&lt;li&gt;至少安装一个WSL发行版&lt;/li&gt;
+&lt;li&gt;64位CPU，建议4GB以上RAM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安装与使用&#34;&gt;安装与使用 &lt;a href=&#34;#%e5%ae%89%e8%a3%85%e4%b8%8e%e4%bd%bf%e7%94%a8&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;WSL Dashboard提供两种安装方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;预编译二进制文件&lt;/strong&gt;：从GitHub Releases下载最新版本的wsldashboard.exe直接运行&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;源码构建&lt;/strong&gt;：使用Rust工具链克隆仓库并构建&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;项目仓库&#34;&gt;项目仓库 &lt;a href=&#34;#%e9%a1%b9%e7%9b%ae%e4%bb%93%e5%ba%93&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/owu/wsl-dashboard&#34;&gt;https://github.com/owu/wsl-dashboard&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>Aura Factory Development Manual</title>
       <link>https://owu.github.io/programs/aura-factory/</link>
