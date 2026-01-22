@@ -9,13 +9,13 @@
 
 <title>A modern WSL instance management tool | owu.github.io</title>
 <link rel="canonical" href="https://owu.github.io/programs/wsl-dashboard/">
-<meta name="description" content="WSL Dashboard是一款基于Rust和Slint构建的现代、高性能且轻量级的WSL (Windows Subsystem for Linux) 实例管理面板，为用户提供高级的原生体验。
-使用时，用户可以轻松管理现有发行版、创建新实例、备份恢复数据、迁移存储位置，并实时监控WSL状态和存储使用情况。" />
+<meta name="description" content="WSL Dashboard is a modern, high-performance, and lightweight WSL (Windows Subsystem for Linux) instance management panel built based on Rust and Slint, providing users with an advanced native experience.
+When using it, users can easily manage existing distributions, create new instances, backup and restore data, migrate storage locations, and monitor WSL status and storage usage in real-time." />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="A modern WSL instance management tool | owu.github.io" />
 <meta property="og:url" content="https://owu.github.io/programs/wsl-dashboard/" />
-<meta property="og:description" content="WSL Dashboard是一款基于Rust和Slint构建的现代、高性能且轻量级的WSL (Windows Subsystem for Linux) 实例管理面板，为用户提供高级的原生体验。
-使用时，用户可以轻松管理现有发行版、创建新实例、备份恢复数据、迁移存储位置，并实时监控WSL状态和存储使用情况。" />
+<meta property="og:description" content="WSL Dashboard is a modern, high-performance, and lightweight WSL (Windows Subsystem for Linux) instance management panel built based on Rust and Slint, providing users with an advanced native experience.
+When using it, users can easily manage existing distributions, create new instances, backup and restore data, migrate storage locations, and monitor WSL status and storage usage in real-time." />
 
 
 
@@ -69,7 +69,7 @@
     <div class="tip">
         <time datetime="2026-01-20 15:00:00 &#43;0800 CST">2026/01/20</time>
         <span class="split">·</span>
-        <span> 683 words </span>
+        <span> 263 words </span>
         <span class="split">·</span>
         <span>
             2 minutes to read
@@ -101,37 +101,36 @@
     <hr />
 
     <div class="content">
-        <p>WSL Dashboard是一款基于Rust和Slint构建的现代、高性能且轻量级的WSL (Windows Subsystem for Linux) 实例管理面板，为用户提供高级的原生体验。
-使用时，用户可以轻松管理现有发行版、创建新实例、备份恢复数据、迁移存储位置，并实时监控WSL状态和存储使用情况。</p>
-<h2 id="核心功能">核心功能 <a href="#%e6%a0%b8%e5%bf%83%e5%8a%9f%e8%83%bd" class="anchor">🔗</a></h2><ul>
-<li><strong>直观的GUI界面</strong>：支持暗黑模式和流畅的动画效果</li>
-<li><strong>全面的WSL实例管理</strong>：一键启动、停止、终止、注销所有WSL发行版</li>
-<li><strong>快速访问工具</strong>：直接打开终端、VS Code和文件资源管理器</li>
-<li><strong>状态实时监控</strong>：动态显示WSL实例运行状态</li>
-<li><strong>备份与恢复</strong>：支持导出为.tar或.tar.gz格式，从备份导入或克隆实例</li>
-<li><strong>存储管理</strong>：支持VHDX迁移到其他磁盘，节省C盘空间</li>
-<li><strong>智能安装</strong>：从Microsoft Store或GitHub安装发行版</li>
-<li><strong>RootFS辅助工具</strong>：内置RootFS下载功能，便于手动安装</li>
+        <p>WSL Dashboard is a modern, high-performance, and lightweight WSL (Windows Subsystem for Linux) instance management panel built based on Rust and Slint, providing users with an advanced native experience.</p>
+<p>When using it, users can easily manage existing distributions, create new instances, backup and restore data, migrate storage locations, and monitor WSL status and storage usage in real-time.</p>
+<h2 id="core-features">Core Features <a href="#core-features" class="anchor">🔗</a></h2><ul>
+<li><strong>Intuitive GUI Interface</strong>: Supports dark mode and smooth animation effects</li>
+<li><strong>Comprehensive WSL Instance Management</strong>: One-click start, stop, terminate, and log out all WSL distributions</li>
+<li><strong>Quick Access Tools</strong>: Directly open terminal, VS Code, and file explorer</li>
+<li><strong>Real-time Status Monitoring</strong>: Dynamically displays WSL instance running status</li>
+<li><strong>Backup and Recovery</strong>: Supports export as .tar or .tar.gz format, import from backup or clone instances</li>
+<li><strong>Storage Management</strong>: Supports VHDX migration to other disks, saving C drive space</li>
+<li><strong>Smart Installation</strong>: Install distributions from Microsoft Store or GitHub</li>
+<li><strong>RootFS Assistant Tool</strong>: Built-in RootFS download functionality for manual installation</li>
 </ul>
-<h2 id="技术特点">技术特点 <a href="#%e6%8a%80%e6%9c%af%e7%89%b9%e7%82%b9" class="anchor">🔗</a></h2><ul>
-<li><strong>高性能</strong>：基于Rust语言，确保内存安全和零成本抽象</li>
-<li><strong>现代化UI</strong>：采用Slint框架，提供GPU加速的流畅界面</li>
-<li><strong>低资源占用</strong>：典型内存占用仅60-80MB，启动速度快</li>
-<li><strong>多语言支持</strong>：支持14种语言的完整国际化</li>
-<li><strong>便携式应用</strong>：单文件可执行程序，无需安装</li>
+<h2 id="technical-features">Technical Features <a href="#technical-features" class="anchor">🔗</a></h2><ul>
+<li><strong>High Performance</strong>: Based on Rust language, ensuring memory safety and zero-cost abstractions</li>
+<li><strong>Modern UI</strong>: Uses Slint framework, providing GPU-accelerated smooth interface</li>
+<li><strong>Low Resource Usage</strong>: Typical memory usage only 60-80MB, fast startup speed</li>
+<li><strong>Multi-language Support</strong>: Complete internationalization supporting 14 languages</li>
+<li><strong>Portable Application</strong>: Single-file executable program, no installation required</li>
 </ul>
-<h2 id="系统要求">系统要求 <a href="#%e7%b3%bb%e7%bb%9f%e8%a6%81%e6%b1%82" class="anchor">🔗</a></h2><ul>
-<li>启用了WSL的Windows 10或Windows 11（推荐WSL 2）</li>
-<li>至少安装一个WSL发行版</li>
-<li>64位CPU，建议4GB以上RAM</li>
+<h2 id="system-requirements">System Requirements <a href="#system-requirements" class="anchor">🔗</a></h2><ul>
+<li>Windows 10 or Windows 11 with WSL enabled (WSL 2 recommended)</li>
+<li>At least one WSL distribution installed</li>
+<li>64-bit CPU, recommended 4GB+ RAM</li>
 </ul>
-<h2 id="安装与使用">安装与使用 <a href="#%e5%ae%89%e8%a3%85%e4%b8%8e%e4%bd%bf%e7%94%a8" class="anchor">🔗</a></h2><p>WSL Dashboard提供两种安装方式：</p>
+<h2 id="installation-and-usage">Installation and Usage <a href="#installation-and-usage" class="anchor">🔗</a></h2><p>WSL Dashboard provides two installation methods:</p>
 <ol>
-<li><strong>预编译二进制文件</strong>：从GitHub Releases下载最新版本的wsldashboard.exe直接运行</li>
-<li><strong>源码构建</strong>：使用Rust工具链克隆仓库并构建</li>
+<li><strong>Pre-compiled Binary</strong>: Download the latest version of wsldashboard.exe from GitHub Releases and run directly</li>
+<li><strong>Source Code Build</strong>: Clone the repository and build using Rust toolchain</li>
 </ol>
-<h2 id="项目仓库">项目仓库 <a href="#%e9%a1%b9%e7%9b%ae%e4%bb%93%e5%ba%93" class="anchor">🔗</a></h2><p><a href="https://github.com/owu/wsl-dashboard">https://github.com/owu/wsl-dashboard</a></p>
-
+<h2 id="project-repository">Project Repository <a href="#project-repository" class="anchor">🔗</a></h2><p><a href="https://github.com/owu/wsl-dashboard">https://github.com/owu/wsl-dashboard</a></p>
     </div>
 
     

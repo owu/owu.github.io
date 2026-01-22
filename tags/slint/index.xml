@@ -13,37 +13,36 @@
       <pubDate>Tue, 20 Jan 2026 15:00:00 +0800</pubDate>
       
       <guid>https://owu.github.io/programs/wsl-dashboard/</guid>
-      <description>&lt;p&gt;WSL Dashboard是一款基于Rust和Slint构建的现代、高性能且轻量级的WSL (Windows Subsystem for Linux) 实例管理面板，为用户提供高级的原生体验。
-使用时，用户可以轻松管理现有发行版、创建新实例、备份恢复数据、迁移存储位置，并实时监控WSL状态和存储使用情况。&lt;/p&gt;
-&lt;h2 id=&#34;核心功能&#34;&gt;核心功能 &lt;a href=&#34;#%e6%a0%b8%e5%bf%83%e5%8a%9f%e8%83%bd&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;直观的GUI界面&lt;/strong&gt;：支持暗黑模式和流畅的动画效果&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;全面的WSL实例管理&lt;/strong&gt;：一键启动、停止、终止、注销所有WSL发行版&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;快速访问工具&lt;/strong&gt;：直接打开终端、VS Code和文件资源管理器&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;状态实时监控&lt;/strong&gt;：动态显示WSL实例运行状态&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;备份与恢复&lt;/strong&gt;：支持导出为.tar或.tar.gz格式，从备份导入或克隆实例&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;存储管理&lt;/strong&gt;：支持VHDX迁移到其他磁盘，节省C盘空间&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;智能安装&lt;/strong&gt;：从Microsoft Store或GitHub安装发行版&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;RootFS辅助工具&lt;/strong&gt;：内置RootFS下载功能，便于手动安装&lt;/li&gt;
+      <description>&lt;p&gt;WSL Dashboard is a modern, high-performance, and lightweight WSL (Windows Subsystem for Linux) instance management panel built based on Rust and Slint, providing users with an advanced native experience.&lt;/p&gt;
+&lt;p&gt;When using it, users can easily manage existing distributions, create new instances, backup and restore data, migrate storage locations, and monitor WSL status and storage usage in real-time.&lt;/p&gt;
+&lt;h2 id=&#34;core-features&#34;&gt;Core Features &lt;a href=&#34;#core-features&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Intuitive GUI Interface&lt;/strong&gt;: Supports dark mode and smooth animation effects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Comprehensive WSL Instance Management&lt;/strong&gt;: One-click start, stop, terminate, and log out all WSL distributions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Quick Access Tools&lt;/strong&gt;: Directly open terminal, VS Code, and file explorer&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Real-time Status Monitoring&lt;/strong&gt;: Dynamically displays WSL instance running status&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Backup and Recovery&lt;/strong&gt;: Supports export as .tar or .tar.gz format, import from backup or clone instances&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Storage Management&lt;/strong&gt;: Supports VHDX migration to other disks, saving C drive space&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Smart Installation&lt;/strong&gt;: Install distributions from Microsoft Store or GitHub&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RootFS Assistant Tool&lt;/strong&gt;: Built-in RootFS download functionality for manual installation&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;技术特点&#34;&gt;技术特点 &lt;a href=&#34;#%e6%8a%80%e6%9c%af%e7%89%b9%e7%82%b9&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;高性能&lt;/strong&gt;：基于Rust语言，确保内存安全和零成本抽象&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;现代化UI&lt;/strong&gt;：采用Slint框架，提供GPU加速的流畅界面&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;低资源占用&lt;/strong&gt;：典型内存占用仅60-80MB，启动速度快&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;多语言支持&lt;/strong&gt;：支持14种语言的完整国际化&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;便携式应用&lt;/strong&gt;：单文件可执行程序，无需安装&lt;/li&gt;
+&lt;h2 id=&#34;technical-features&#34;&gt;Technical Features &lt;a href=&#34;#technical-features&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;High Performance&lt;/strong&gt;: Based on Rust language, ensuring memory safety and zero-cost abstractions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Modern UI&lt;/strong&gt;: Uses Slint framework, providing GPU-accelerated smooth interface&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Low Resource Usage&lt;/strong&gt;: Typical memory usage only 60-80MB, fast startup speed&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-language Support&lt;/strong&gt;: Complete internationalization supporting 14 languages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Portable Application&lt;/strong&gt;: Single-file executable program, no installation required&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;系统要求&#34;&gt;系统要求 &lt;a href=&#34;#%e7%b3%bb%e7%bb%9f%e8%a6%81%e6%b1%82&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;启用了WSL的Windows 10或Windows 11（推荐WSL 2）&lt;/li&gt;
-&lt;li&gt;至少安装一个WSL发行版&lt;/li&gt;
-&lt;li&gt;64位CPU，建议4GB以上RAM&lt;/li&gt;
+&lt;h2 id=&#34;system-requirements&#34;&gt;System Requirements &lt;a href=&#34;#system-requirements&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Windows 10 or Windows 11 with WSL enabled (WSL 2 recommended)&lt;/li&gt;
+&lt;li&gt;At least one WSL distribution installed&lt;/li&gt;
+&lt;li&gt;64-bit CPU, recommended 4GB+ RAM&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;安装与使用&#34;&gt;安装与使用 &lt;a href=&#34;#%e5%ae%89%e8%a3%85%e4%b8%8e%e4%bd%bf%e7%94%a8&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;WSL Dashboard提供两种安装方式：&lt;/p&gt;
+&lt;h2 id=&#34;installation-and-usage&#34;&gt;Installation and Usage &lt;a href=&#34;#installation-and-usage&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;WSL Dashboard provides two installation methods:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;预编译二进制文件&lt;/strong&gt;：从GitHub Releases下载最新版本的wsldashboard.exe直接运行&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;源码构建&lt;/strong&gt;：使用Rust工具链克隆仓库并构建&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pre-compiled Binary&lt;/strong&gt;: Download the latest version of wsldashboard.exe from GitHub Releases and run directly&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source Code Build&lt;/strong&gt;: Clone the repository and build using Rust toolchain&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;项目仓库&#34;&gt;项目仓库 &lt;a href=&#34;#%e9%a1%b9%e7%9b%ae%e4%bb%93%e5%ba%93&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/owu/wsl-dashboard&#34;&gt;https://github.com/owu/wsl-dashboard&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;h2 id=&#34;project-repository&#34;&gt;Project Repository &lt;a href=&#34;#project-repository&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/owu/wsl-dashboard&#34;&gt;https://github.com/owu/wsl-dashboard&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -52,82 +51,82 @@
       <pubDate>Thu, 25 Dec 2025 14:00:00 +0800</pubDate>
       
       <guid>https://owu.github.io/programs/aura-factory/</guid>
-      <description>&lt;p&gt;Aura Factory 是一个基于 Rust 语言开发的免费开源桌面音视频转换工具，采用现代化的 GUI 框架 Slint 构建用户界面，利用 FFmpeg 作为底层音视频处理引擎。&lt;/p&gt;
-&lt;p&gt;Aura Factory 展示了现代 Rust 桌面应用开发的完整技术栈，结合了高性能的系统编程语言和现代化的 GUI 框架。&lt;/p&gt;
-&lt;h2 id=&#34;项目概况&#34;&gt;项目概况 &lt;a href=&#34;#%e9%a1%b9%e7%9b%ae%e6%a6%82%e5%86%b5&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;核心特性&#34;&gt;核心特性 &lt;a href=&#34;#%e6%a0%b8%e5%bf%83%e7%89%b9%e6%80%a7&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;支持多种音视频格式转换&lt;/li&gt;
-&lt;li&gt;提供视频裁剪、分辨率调整、帧率设置等高级功能&lt;/li&gt;
-&lt;li&gt;跨平台支持（Windows/Linux）&lt;/li&gt;
-&lt;li&gt;实时进度显示和转换状态监控&lt;/li&gt;
-&lt;li&gt;版本过期检测机制&lt;/li&gt;
+      <description>&lt;p&gt;Aura Factory is a free and open-source desktop audio/video conversion tool developed based on the Rust language. It uses the modern GUI framework Slint to build the user interface and leverages FFmpeg as the underlying audio/video processing engine.&lt;/p&gt;
+&lt;p&gt;Aura Factory demonstrates the complete technology stack for modern Rust desktop application development, combining a high-performance system programming language with a modern GUI framework.&lt;/p&gt;
+&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview &lt;a href=&#34;#project-overview&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;core-features&#34;&gt;Core Features &lt;a href=&#34;#core-features&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Supports multiple audio/video format conversions&lt;/li&gt;
+&lt;li&gt;Provides advanced features like video cropping, resolution adjustment, frame rate settings, etc.&lt;/li&gt;
+&lt;li&gt;Cross-platform support (Windows/Linux)&lt;/li&gt;
+&lt;li&gt;Real-time progress display and conversion status monitoring&lt;/li&gt;
+&lt;li&gt;Version expiration detection mechanism&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;技术架构&#34;&gt;技术架构 &lt;a href=&#34;#%e6%8a%80%e6%9c%af%e6%9e%b6%e6%9e%84&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;整体架构图&#34;&gt;整体架构图 &lt;a href=&#34;#%e6%95%b4%e4%bd%93%e6%9e%b6%e6%9e%84%e5%9b%be&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│    UI 层        │    │   业务逻辑层     │    │    FFmpeg 层    │
-│  (Slint GUI)    │◄──►│  (Rust Core)    │◄──►│  (Sidecar)      │
+&lt;h2 id=&#34;technical-architecture&#34;&gt;Technical Architecture &lt;a href=&#34;#technical-architecture&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;overall-architecture-diagram&#34;&gt;Overall Architecture Diagram &lt;a href=&#34;#overall-architecture-diagram&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│    UI Layer     │    │   Business Logic │    │   FFmpeg Layer  │
+│  (Slint GUI)    │◄──►│   (Rust Core)    │◄──►│  (Sidecar)      │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;技术栈&#34;&gt;技术栈 &lt;a href=&#34;#%e6%8a%80%e6%9c%af%e6%a0%88&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;编程语言&lt;/strong&gt;: Rust 2024 Edition&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GUI 框架&lt;/strong&gt;: Slint 1.14.1&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;音视频处理&lt;/strong&gt;: FFmpeg-sidecar 2.3.0&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;异步运行时&lt;/strong&gt;: Tokio 1.x&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;HTTP 客户端&lt;/strong&gt;: Reqwest&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;文件对话框&lt;/strong&gt;: RFD&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;序列化&lt;/strong&gt;: Serde&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;时间处理&lt;/strong&gt;: Chrono&lt;/li&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;technology-stack&#34;&gt;Technology Stack &lt;a href=&#34;#technology-stack&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Programming Language&lt;/strong&gt;: Rust 2024 Edition&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GUI Framework&lt;/strong&gt;: Slint 1.14.1&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Audio/Video Processing&lt;/strong&gt;: FFmpeg-sidecar 2.3.0&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Async Runtime&lt;/strong&gt;: Tokio 1.x&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HTTP Client&lt;/strong&gt;: Reqwest&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;File Dialog&lt;/strong&gt;: RFD&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Serialization&lt;/strong&gt;: Serde&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Time Handling&lt;/strong&gt;: Chrono&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;项目结构&#34;&gt;项目结构 &lt;a href=&#34;#%e9%a1%b9%e7%9b%ae%e7%bb%93%e6%9e%84&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;aura-factory/
-├── src/                    # Rust 源代码
-│   ├── main.rs            # 应用程序入口点
-│   ├── consts.rs          # 常量定义
-│   ├── conversion.rs      # 转换逻辑
-│   ├── media.rs           # 媒体文件分析
+&lt;h2 id=&#34;project-structure&#34;&gt;Project Structure &lt;a href=&#34;#project-structure&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;aura-factory/
+├── src/                    # Rust source code
+│   ├── main.rs            # Application entry point
+│   ├── consts.rs          # Constant definitions
+│   ├── conversion.rs      # Conversion logic
+│   ├── media.rs           # Media file analysis
 │   └── utils/
-│       ├── mod.rs         # 工具模块导出
-│       └── time.rs        # 时间相关工具
-├── ui/                    # 用户界面文件
-│   ├── app.slint          # 主界面定义
+│       ├── mod.rs         # Utility module exports
+│       └── time.rs        # Time-related utilities
+├── ui/                    # User interface files
+│   ├── app.slint          # Main interface definition
 │   ├── components/
-│   │   └── components.slint # 自定义组件
-│   └── statics/           # 静态资源
-├── build.rs               # 构建脚本
-├── build.ps1              # Windows 构建脚本
-├── build.sh               # Linux 构建脚本
-└── Cargo.toml            # 项目配置
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;核心模块详解&#34;&gt;核心模块详解 &lt;a href=&#34;#%e6%a0%b8%e5%bf%83%e6%a8%a1%e5%9d%97%e8%af%a6%e8%a7%a3&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;1-主程序模块-mainrs&#34;&gt;1. 主程序模块 (main.rs) &lt;a href=&#34;#1-%e4%b8%bb%e7%a8%8b%e5%ba%8f%e6%a8%a1%e5%9d%97-mainrs&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;主要功能&lt;/strong&gt;:&lt;/p&gt;
+│   │   └── components.slint # Custom components
+│   └── statics/           # Static resources
+├── build.rs               # Build script
+├── build.ps1              # Windows build script
+├── build.sh               # Linux build script
+└── Cargo.toml            # Project configuration
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;core-module-details&#34;&gt;Core Module Details &lt;a href=&#34;#core-module-details&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;1-main-program-module-mainrs&#34;&gt;1. Main Program Module (main.rs) &lt;a href=&#34;#1-main-program-module-mainrs&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Main Functions&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;应用程序初始化和生命周期管理&lt;/li&gt;
-&lt;li&gt;用户界面事件处理&lt;/li&gt;
-&lt;li&gt;异步任务调度&lt;/li&gt;
-&lt;li&gt;版本过期检测&lt;/li&gt;
+&lt;li&gt;Application initialization and lifecycle management&lt;/li&gt;
+&lt;li&gt;User interface event handling&lt;/li&gt;
+&lt;li&gt;Asynchronous task scheduling&lt;/li&gt;
+&lt;li&gt;Version expiration detection&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;关键实现&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Key Implementation&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#[tokio::main]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;async&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;-&amp;gt; &lt;span class=&#34;nb&#34;&gt;Result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Box&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;dyn&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;error&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;Error&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// FFmpeg 自动下载检查
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// FFmpeg automatic download check
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ffmpeg_sidecar&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;download&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;auto_download&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 创建 Slint 应用实例
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Create Slint application instance
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;App&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 网络时间获取（用于过期检测）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Network time acquisition (for expiration detection)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;network_timestamp&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Arc&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;AtomicI64&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tokio&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;spawn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;async&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;move&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ts&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;utils&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;standard_time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;network_timestamp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;store&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Ordering&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;Relaxed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 文件选择回调
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// File selection callback
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;on_select_file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;move&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;||&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 使用 RFD 打开文件对话框
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Use RFD to open file dialog
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Some&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FileDialog&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pick_file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;            &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 异步分析媒体文件信息
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;            &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Asynchronously analyze media file information
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;            &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tokio&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;spawn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;async&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;move&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;match&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;media&lt;/span&gt;::&lt;span class=&#34;n&#34;&gt;probe_media_info&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path_str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;await&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                    &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Ok&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;duration_str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;info_str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 更新 UI 显示
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Update UI display
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set_total_duration&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;duration_str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;into&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;());&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                    &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Err&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/* 错误处理 */&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                    &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Err&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/* Error handling */&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;            &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -136,13 +135,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Ok&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(())&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-媒体分析模块-mediars&#34;&gt;2. 媒体分析模块 (media.rs) &lt;a href=&#34;#2-%e5%aa%92%e4%bd%93%e5%88%86%e6%9e%90%e6%a8%a1%e5%9d%97-mediars&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;主要功能&lt;/strong&gt;:&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-media-analysis-module-mediars&#34;&gt;2. Media Analysis Module (media.rs) &lt;a href=&#34;#2-media-analysis-module-mediars&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Main Functions&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;使用 FFprobe 分析媒体文件元数据&lt;/li&gt;
-&lt;li&gt;提取视频/音频流信息&lt;/li&gt;
-&lt;li&gt;格式化显示信息&lt;/li&gt;
+&lt;li&gt;Use FFprobe to analyze media file metadata&lt;/li&gt;
+&lt;li&gt;Extract video/audio stream information&lt;/li&gt;
+&lt;li&gt;Format display information&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;数据结构&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Data Structures&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#[derive(Deserialize, Debug)]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ProbeResult&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;format&lt;/span&gt;: &lt;span class=&#34;nc&#34;&gt;Format&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -151,170 +150,171 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#[derive(Deserialize, Debug)]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Stream&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;codec_type&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// &amp;#34;video&amp;#34; 或 &amp;#34;audio&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;width&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;Option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;i32&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 视频宽度
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;height&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;Option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;i32&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;       &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 视频高度
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r_frame_rate&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;Option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 帧率
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bit_rate&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;Option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 比特率
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sample_rate&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;Option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 音频采样率
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;codec_name&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;Option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 编解码器名称
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;codec_type&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// &amp;#34;video&amp;#34; or &amp;#34;audio&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;width&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;Option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;i32&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Video width
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;height&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;Option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;i32&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;       &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Video height
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r_frame_rate&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;Option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Frame rate
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bit_rate&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;Option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Bitrate
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sample_rate&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;Option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Audio sample rate
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;codec_name&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;Option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Codec name
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;关键函数&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;probe_media_info()&lt;/code&gt;: 分析媒体文件并返回格式化信息&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;get_probe_result()&lt;/code&gt;: 执行 FFprobe 命令并解析 JSON 输出&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;3-转换处理模块-conversionrs&#34;&gt;3. 转换处理模块 (conversion.rs) &lt;a href=&#34;#3-%e8%bd%ac%e6%8d%a2%e5%a4%84%e7%90%86%e6%a8%a1%e5%9d%97-conversionrs&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;主要功能&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;构建和执行 FFmpeg 转换命令&lt;/li&gt;
-&lt;li&gt;实时进度监控&lt;/li&gt;
-&lt;li&gt;转换取消支持&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;核心转换流程&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;async&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;run_conversion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 输入文件路径
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;format&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 输出格式
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 开始时间
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;end&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;            &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 结束时间
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v_res&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 视频分辨率
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v_fps&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 视频帧率
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v_bitrate&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 视频比特率
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a_rate&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 音频采样率
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a_bitrate&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 音频比特率
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v_codec&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 视频编解码器
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;app_weak&lt;/span&gt;: &lt;span class=&#34;nc&#34;&gt;Weak&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;App&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// UI 弱引用
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cancel_flag&lt;/span&gt;: &lt;span class=&#34;nc&#34;&gt;Arc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;AtomicBool&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 取消标志
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Key&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Functions&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;probe_media_info&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;`&lt;/span&gt;: &lt;span class=&#34;nc&#34;&gt;Analyze&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;media&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;and&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;formatted&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;information&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get_probe_result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;`&lt;/span&gt;: &lt;span class=&#34;nc&#34;&gt;Execute&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FFprobe&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;command&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;and&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;parse&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;no&#34;&gt;JSON&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;###&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;3.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Conversion&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Processing&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Module&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;conversion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Main&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Functions&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Build&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;and&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;execute&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FFmpeg&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;conversion&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;commands&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Real&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;progress&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;monitoring&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Conversion&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cancellation&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;support&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Core&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Conversion&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Process&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;```&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rust&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;async&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;run_conversion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Input file path
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;format&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Output format
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Start time
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;end&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;            &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// End time
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v_res&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Video resolution
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v_fps&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Video frame rate
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v_bitrate&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Video bitrate
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a_rate&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Audio sample rate
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a_bitrate&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Audio bitrate
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v_codec&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Video codec
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;app_weak&lt;/span&gt;: &lt;span class=&#34;nc&#34;&gt;Weak&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;App&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// UI weak reference
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cancel_flag&lt;/span&gt;: &lt;span class=&#34;nc&#34;&gt;Arc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;AtomicBool&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Cancel flag
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;-&amp;gt; &lt;span class=&#34;nb&#34;&gt;Result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;进度监控机制&lt;/strong&gt;:&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Progress Monitoring Mechanism&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;通过 FFmpeg 的进度事件获取转换进度&lt;/li&gt;
-&lt;li&gt;基于预期时长计算百分比&lt;/li&gt;
-&lt;li&gt;实时更新 UI 进度条和状态信息&lt;/li&gt;
+&lt;li&gt;Get conversion progress through FFmpeg&amp;rsquo;s progress events&lt;/li&gt;
+&lt;li&gt;Calculate percentage based on expected duration&lt;/li&gt;
+&lt;li&gt;Real-time update of UI progress bar and status information&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;4-时间工具模块-utilstimers&#34;&gt;4. 时间工具模块 (utils/time.rs) &lt;a href=&#34;#4-%e6%97%b6%e9%97%b4%e5%b7%a5%e5%85%b7%e6%a8%a1%e5%9d%97-utilstimers&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;主要功能&lt;/strong&gt;:&lt;/p&gt;
+&lt;h3 id=&#34;4-time-utility-module-utilstimers&#34;&gt;4. Time Utility Module (utils/time.rs) &lt;a href=&#34;#4-time-utility-module-utilstimers&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Main Functions&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;网络时间同步（用于版本过期检测）&lt;/li&gt;
-&lt;li&gt;时间格式转换&lt;/li&gt;
+&lt;li&gt;Network time synchronization (for version expiration detection)&lt;/li&gt;
+&lt;li&gt;Time format conversion&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;网络时间获取策略&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Network Time Acquisition Strategy&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;预定义多个国内网站作为时间源&lt;/li&gt;
-&lt;li&gt;随机选择并尝试连接&lt;/li&gt;
-&lt;li&gt;失败时回退到本地系统时间&lt;/li&gt;
+&lt;li&gt;Predefined multiple domestic websites as time sources&lt;/li&gt;
+&lt;li&gt;Randomly select and attempt connections&lt;/li&gt;
+&lt;li&gt;Fallback to local system time on failure&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;const&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;no&#34;&gt;WEB_URLS&lt;/span&gt;: &lt;span class=&#34;kp&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WebSite&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WebSite&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;: &lt;span class=&#34;s&#34;&gt;&amp;#34;百度&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;: &lt;span class=&#34;s&#34;&gt;&amp;#34;http://www.baidu.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WebSite&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;: &lt;span class=&#34;s&#34;&gt;&amp;#34;国家授时中心&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;: &lt;span class=&#34;s&#34;&gt;&amp;#34;http://www.ntsc.ac.cn&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// ... 其他网站
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WebSite&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;: &lt;span class=&#34;s&#34;&gt;&amp;#34;Baidu&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;: &lt;span class=&#34;s&#34;&gt;&amp;#34;http://www.baidu.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WebSite&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;: &lt;span class=&#34;s&#34;&gt;&amp;#34;National Time Service Center&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;: &lt;span class=&#34;s&#34;&gt;&amp;#34;http://www.ntsc.ac.cn&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// ... Other websites
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;用户界面设计&#34;&gt;用户界面设计 &lt;a href=&#34;#%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2%e8%ae%be%e8%ae%a1&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;界面架构&#34;&gt;界面架构 &lt;a href=&#34;#%e7%95%8c%e9%9d%a2%e6%9e%b6%e6%9e%84&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;采用 Slint 声明式 UI 框架，主要组件包括：&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;user-interface-design&#34;&gt;User Interface Design &lt;a href=&#34;#user-interface-design&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;interface-architecture&#34;&gt;Interface Architecture &lt;a href=&#34;#interface-architecture&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Using Slint declarative UI framework, main components include:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;主窗口 (App)&lt;/strong&gt;: 继承自 Window 的基础组件&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;卡片组件 (Card)&lt;/strong&gt;: 可复用的内容容器&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;标签按钮 (TabButton)&lt;/strong&gt;: 选项卡切换控件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Main Window (App)&lt;/strong&gt;: Base component inherited from Window&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Card Component (Card)&lt;/strong&gt;: Reusable content container&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tab Button (TabButton)&lt;/strong&gt;: Tab switching control&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;界面布局&#34;&gt;界面布局 &lt;a href=&#34;#%e7%95%8c%e9%9d%a2%e5%b8%83%e5%b1%80&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;顶部&lt;/strong&gt;: Logo 和标题区域&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;中部&lt;/strong&gt;: 选项卡导航（常规/输出设置）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;底部&lt;/strong&gt;: 文件选择、转换控制、进度显示&lt;/li&gt;
+&lt;h3 id=&#34;interface-layout&#34;&gt;Interface Layout &lt;a href=&#34;#interface-layout&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Top&lt;/strong&gt;: Logo and title area&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Middle&lt;/strong&gt;: Tab navigation (General/Output Settings)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bottom&lt;/strong&gt;: File selection, conversion control, progress display&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;状态管理&#34;&gt;状态管理 &lt;a href=&#34;#%e7%8a%b6%e6%80%81%e7%ae%a1%e7%90%86&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;通过 Slint 的 in-out property 机制管理应用状态：&lt;/p&gt;
+&lt;h3 id=&#34;state-management&#34;&gt;State Management &lt;a href=&#34;#state-management&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Manage application state through Slint&amp;rsquo;s in-out property mechanism:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;selected-file&lt;/code&gt;: 当前选中的文件路径&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;progress&lt;/code&gt;: 转换进度 (0.0-1.0)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;is-converting&lt;/code&gt;: 是否正在转换&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;status-message&lt;/code&gt;: 状态提示信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;selected-file&lt;/code&gt;: Currently selected file path&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;progress&lt;/code&gt;: Conversion progress (0.0-1.0)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;is-converting&lt;/code&gt;: Whether conversion is in progress&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;status-message&lt;/code&gt;: Status prompt information&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;构建和部署&#34;&gt;构建和部署 &lt;a href=&#34;#%e6%9e%84%e5%bb%ba%e5%92%8c%e9%83%a8%e7%bd%b2&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;windows-构建&#34;&gt;Windows 构建 &lt;a href=&#34;#windows-%e6%9e%84%e5%bb%ba&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# 使用 build.ps1 脚本&lt;/span&gt;
+&lt;h2 id=&#34;build-and-deployment&#34;&gt;Build and Deployment &lt;a href=&#34;#build-and-deployment&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;windows-build&#34;&gt;Windows Build &lt;a href=&#34;#windows-build&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Use build.ps1 script&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;./&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;build&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;ps1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;构建过程：&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Build process:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;清理之前的构建&lt;/li&gt;
-&lt;li&gt;使用 cargo build 编译发布版本&lt;/li&gt;
-&lt;li&gt;从 consts.rs 提取版本号&lt;/li&gt;
-&lt;li&gt;重命名可执行文件&lt;/li&gt;
+&lt;li&gt;Clean previous builds&lt;/li&gt;
+&lt;li&gt;Use cargo build to compile release version&lt;/li&gt;
+&lt;li&gt;Extract version number from consts.rs&lt;/li&gt;
+&lt;li&gt;Rename executable file&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;linux-构建&#34;&gt;Linux 构建 &lt;a href=&#34;#linux-%e6%9e%84%e5%bb%ba&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 使用 build.sh 脚本&lt;/span&gt;
+&lt;h3 id=&#34;linux-build&#34;&gt;Linux Build &lt;a href=&#34;#linux-build&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Use build.sh script&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./build.sh
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;构建过程：&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Build process:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;创建标准的 Linux 包结构&lt;/li&gt;
-&lt;li&gt;生成桌面文件和图标&lt;/li&gt;
-&lt;li&gt;创建安装/卸载脚本&lt;/li&gt;
+&lt;li&gt;Create standard Linux package structure&lt;/li&gt;
+&lt;li&gt;Generate desktop files and icons&lt;/li&gt;
+&lt;li&gt;Create installation/uninstallation scripts&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;构建配置优化&#34;&gt;构建配置优化 &lt;a href=&#34;#%e6%9e%84%e5%bb%ba%e9%85%8d%e7%bd%ae%e4%bc%98%e5%8c%96&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;在 Cargo.toml 中配置了优化的发布构建：&lt;/p&gt;
+&lt;h3 id=&#34;build-configuration-optimization&#34;&gt;Build Configuration Optimization &lt;a href=&#34;#build-configuration-optimization&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Optimized release build configuration in Cargo.toml:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;profile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;release&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;opt-level&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;z&amp;#34;&lt;/span&gt;      &lt;span class=&#34;c&#34;&gt;# 最小化代码大小&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;lto&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;          &lt;span class=&#34;c&#34;&gt;# 链接时优化&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;codegen-units&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;   &lt;span class=&#34;c&#34;&gt;# 单代码生成单元&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;strip&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;        &lt;span class=&#34;c&#34;&gt;# 去除调试符号&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;panic&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;abort&amp;#34;&lt;/span&gt;     &lt;span class=&#34;c&#34;&gt;# 异常时直接终止&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;关键技术特性&#34;&gt;关键技术特性 &lt;a href=&#34;#%e5%85%b3%e9%94%ae%e6%8a%80%e6%9c%af%e7%89%b9%e6%80%a7&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;1-异步处理架构&#34;&gt;1. 异步处理架构 &lt;a href=&#34;#1-%e5%bc%82%e6%ad%a5%e5%a4%84%e7%90%86%e6%9e%b6%e6%9e%84&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;使用 Tokio 运行时处理文件分析和转换任务&lt;/li&gt;
-&lt;li&gt;UI 线程与后台任务分离，避免界面卡顿&lt;/li&gt;
-&lt;li&gt;基于回调的事件驱动模型&lt;/li&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;opt-level&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;z&amp;#34;&lt;/span&gt;      &lt;span class=&#34;c&#34;&gt;# Minimize code size&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;lto&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;          &lt;span class=&#34;c&#34;&gt;# Link-time optimization&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;codegen-units&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;   &lt;span class=&#34;c&#34;&gt;# Single code generation unit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;strip&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;        &lt;span class=&#34;c&#34;&gt;# Remove debug symbols&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;panic&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;abort&amp;#34;&lt;/span&gt;     &lt;span class=&#34;c&#34;&gt;# Direct termination on panic&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;key-technical-features&#34;&gt;Key Technical Features &lt;a href=&#34;#key-technical-features&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;1-asynchronous-processing-architecture&#34;&gt;1. Asynchronous Processing Architecture &lt;a href=&#34;#1-asynchronous-processing-architecture&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Use Tokio runtime to handle file analysis and conversion tasks&lt;/li&gt;
+&lt;li&gt;Separate UI thread from background tasks to avoid interface lag&lt;/li&gt;
+&lt;li&gt;Callback-based event-driven model&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;2-错误处理机制&#34;&gt;2. 错误处理机制 &lt;a href=&#34;#2-%e9%94%99%e8%af%af%e5%a4%84%e7%90%86%e6%9c%ba%e5%88%b6&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;使用 Anyhow 库进行统一的错误处理&lt;/li&gt;
-&lt;li&gt;详细的错误信息反馈给用户&lt;/li&gt;
-&lt;li&gt;优雅的失败恢复机制&lt;/li&gt;
+&lt;h3 id=&#34;2-error-handling-mechanism&#34;&gt;2. Error Handling Mechanism &lt;a href=&#34;#2-error-handling-mechanism&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Use Anyhow library for unified error handling&lt;/li&gt;
+&lt;li&gt;Detailed error information feedback to users&lt;/li&gt;
+&lt;li&gt;Graceful failure recovery mechanism&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;3-资源管理&#34;&gt;3. 资源管理 &lt;a href=&#34;#3-%e8%b5%84%e6%ba%90%e7%ae%a1%e7%90%86&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;使用 Arc 和 Atomic 类型进行线程安全的数据共享&lt;/li&gt;
-&lt;li&gt;弱引用避免循环引用导致的内存泄漏&lt;/li&gt;
-&lt;li&gt;及时的资源释放和清理&lt;/li&gt;
+&lt;h3 id=&#34;3-resource-management&#34;&gt;3. Resource Management &lt;a href=&#34;#3-resource-management&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Use Arc and Atomic types for thread-safe data sharing&lt;/li&gt;
+&lt;li&gt;Weak references to avoid memory leaks from circular references&lt;/li&gt;
+&lt;li&gt;Timely resource release and cleanup&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;4-跨平台兼容性&#34;&gt;4. 跨平台兼容性 &lt;a href=&#34;#4-%e8%b7%a8%e5%b9%b3%e5%8f%b0%e5%85%bc%e5%ae%b9%e6%80%a7&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;条件编译处理平台差异（如 Windows 图标资源）&lt;/li&gt;
-&lt;li&gt;统一的文件路径处理&lt;/li&gt;
-&lt;li&gt;平台特定的构建脚本&lt;/li&gt;
+&lt;h3 id=&#34;4-cross-platform-compatibility&#34;&gt;4. Cross-Platform Compatibility &lt;a href=&#34;#4-cross-platform-compatibility&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Conditional compilation to handle platform differences (e.g., Windows icon resources)&lt;/li&gt;
+&lt;li&gt;Unified file path handling&lt;/li&gt;
+&lt;li&gt;Platform-specific build scripts&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;性能优化&#34;&gt;性能优化 &lt;a href=&#34;#%e6%80%a7%e8%83%bd%e4%bc%98%e5%8c%96&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;构建优化&#34;&gt;构建优化 &lt;a href=&#34;#%e6%9e%84%e5%bb%ba%e4%bc%98%e5%8c%96&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;启用 LTO（链接时优化）减小二进制大小&lt;/li&gt;
-&lt;li&gt;使用最小化优化级别 (-Oz)&lt;/li&gt;
-&lt;li&gt;去除调试符号和冗余代码&lt;/li&gt;
+&lt;h2 id=&#34;performance-optimization&#34;&gt;Performance Optimization &lt;a href=&#34;#performance-optimization&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;build-optimization&#34;&gt;Build Optimization &lt;a href=&#34;#build-optimization&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Enable LTO (Link-Time Optimization) to reduce binary size&lt;/li&gt;
+&lt;li&gt;Use minimal optimization level (-Oz)&lt;/li&gt;
+&lt;li&gt;Remove debug symbols and redundant code&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;运行时优化&#34;&gt;运行时优化 &lt;a href=&#34;#%e8%bf%90%e8%a1%8c%e6%97%b6%e4%bc%98%e5%8c%96&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;异步任务避免阻塞 UI 线程&lt;/li&gt;
-&lt;li&gt;合理的内存分配和释放&lt;/li&gt;
-&lt;li&gt;高效的字符串处理&lt;/li&gt;
+&lt;h3 id=&#34;runtime-optimization&#34;&gt;Runtime Optimization &lt;a href=&#34;#runtime-optimization&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Asynchronous tasks avoid blocking UI thread&lt;/li&gt;
+&lt;li&gt;Reasonable memory allocation and deallocation&lt;/li&gt;
+&lt;li&gt;Efficient string processing&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;安全考虑&#34;&gt;安全考虑 &lt;a href=&#34;#%e5%ae%89%e5%85%a8%e8%80%83%e8%99%91&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;输入验证&#34;&gt;输入验证 &lt;a href=&#34;#%e8%be%93%e5%85%a5%e9%aa%8c%e8%af%81&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;文件路径安全性检查&lt;/li&gt;
-&lt;li&gt;时间格式有效性验证&lt;/li&gt;
-&lt;li&gt;参数边界检查&lt;/li&gt;
+&lt;h2 id=&#34;security-considerations&#34;&gt;Security Considerations &lt;a href=&#34;#security-considerations&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;input-validation&#34;&gt;Input Validation &lt;a href=&#34;#input-validation&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;File path security checks&lt;/li&gt;
+&lt;li&gt;Time format validity verification&lt;/li&gt;
+&lt;li&gt;Parameter boundary checks&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;资源访问&#34;&gt;资源访问 &lt;a href=&#34;#%e8%b5%84%e6%ba%90%e8%ae%bf%e9%97%ae&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;文件读写权限控制&lt;/li&gt;
-&lt;li&gt;网络请求超时设置&lt;/li&gt;
-&lt;li&gt;内存安全保证（Rust 所有权系统）&lt;/li&gt;
+&lt;h3 id=&#34;resource-access&#34;&gt;Resource Access &lt;a href=&#34;#resource-access&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;File read/write permission control&lt;/li&gt;
+&lt;li&gt;Network request timeout settings&lt;/li&gt;
+&lt;li&gt;Memory safety guarantee (Rust ownership system)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;扩展性设计&#34;&gt;扩展性设计 &lt;a href=&#34;#%e6%89%a9%e5%b1%95%e6%80%a7%e8%ae%be%e8%ae%a1&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;模块化架构&#34;&gt;模块化架构 &lt;a href=&#34;#%e6%a8%a1%e5%9d%97%e5%8c%96%e6%9e%b6%e6%9e%84&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;清晰的模块边界和职责分离&lt;/li&gt;
-&lt;li&gt;易于添加新的文件格式支持&lt;/li&gt;
-&lt;li&gt;可扩展的转换参数配置&lt;/li&gt;
+&lt;h2 id=&#34;extensibility-design&#34;&gt;Extensibility Design &lt;a href=&#34;#extensibility-design&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;modular-architecture&#34;&gt;Modular Architecture &lt;a href=&#34;#modular-architecture&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Clear module boundaries and responsibility separation&lt;/li&gt;
+&lt;li&gt;Easy to add new file format support&lt;/li&gt;
+&lt;li&gt;Extensible conversion parameter configuration&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;配置化设计&#34;&gt;配置化设计 &lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e5%8c%96%e8%ae%be%e8%ae%a1&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;常量集中管理便于维护&lt;/li&gt;
-&lt;li&gt;构建过程参数化&lt;/li&gt;
-&lt;li&gt;界面元素可配置&lt;/li&gt;
+&lt;h3 id=&#34;configuration-based-design&#34;&gt;Configuration-Based Design &lt;a href=&#34;#configuration-based-design&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Centralized constant management for easy maintenance&lt;/li&gt;
+&lt;li&gt;Parameterized build process&lt;/li&gt;
+&lt;li&gt;Configurable interface elements&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;已知限制和未来改进&#34;&gt;已知限制和未来改进 &lt;a href=&#34;#%e5%b7%b2%e7%9f%a5%e9%99%90%e5%88%b6%e5%92%8c%e6%9c%aa%e6%9d%a5%e6%94%b9%e8%bf%9b&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;当前限制&#34;&gt;当前限制 &lt;a href=&#34;#%e5%bd%93%e5%89%8d%e9%99%90%e5%88%b6&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;依赖外部 FFmpeg 二进制文件&lt;/li&gt;
-&lt;li&gt;转换参数配置相对基础&lt;/li&gt;
-&lt;li&gt;批量处理支持有限&lt;/li&gt;
+&lt;h2 id=&#34;known-limitations-and-future-improvements&#34;&gt;Known Limitations and Future Improvements &lt;a href=&#34;#known-limitations-and-future-improvements&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;current-limitations&#34;&gt;Current Limitations &lt;a href=&#34;#current-limitations&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Dependency on external FFmpeg binaries&lt;/li&gt;
+&lt;li&gt;Relatively basic conversion parameter configuration&lt;/li&gt;
+&lt;li&gt;Limited batch processing support&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;改进方向&#34;&gt;改进方向 &lt;a href=&#34;#%e6%94%b9%e8%bf%9b%e6%96%b9%e5%90%91&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;集成更多音视频处理功能&lt;/li&gt;
-&lt;li&gt;添加预设配置模板&lt;/li&gt;
-&lt;li&gt;支持批量文件处理&lt;/li&gt;
-&lt;li&gt;增强错误恢复和重试机制&lt;/li&gt;
+&lt;h3 id=&#34;improvement-directions&#34;&gt;Improvement Directions &lt;a href=&#34;#improvement-directions&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Integrate more audio/video processing features&lt;/li&gt;
+&lt;li&gt;Add preset configuration templates&lt;/li&gt;
+&lt;li&gt;Support batch file processing&lt;/li&gt;
+&lt;li&gt;Enhance error recovery and retry mechanisms&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;总结&#34;&gt;总结 &lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;项目采用了合理的架构设计，具有良好的可维护性和扩展性。通过详细的代码分析和模块化设计，为后续的功能扩展奠定了坚实的基础。&lt;/p&gt;
-&lt;h2 id=&#34;许可证&#34;&gt;许可证 &lt;a href=&#34;#%e8%ae%b8%e5%8f%af%e8%af%81&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;LICENSE&#34;&gt;GNU GPL v3 License&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;贡献&#34;&gt;贡献 &lt;a href=&#34;#%e8%b4%a1%e7%8c%ae&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;欢迎提交Issue和Pull Request！&lt;/p&gt;
-&lt;h2 id=&#34;联系方式&#34;&gt;联系方式 &lt;a href=&#34;#%e8%81%94%e7%b3%bb%e6%96%b9%e5%bc%8f&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;项目地址：&lt;a href=&#34;https://github.com/owu/aura-factory&#34;&gt;https://github.com/owu/aura-factory&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;h2 id=&#34;summary&#34;&gt;Summary &lt;a href=&#34;#summary&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The project adopts a reasonable architecture design with good maintainability and extensibility. Through detailed code analysis and modular design, it lays a solid foundation for subsequent feature expansion.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License &lt;a href=&#34;#license&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;LICENSE&#34;&gt;GNU GPL v3 License&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;contribution&#34;&gt;Contribution &lt;a href=&#34;#contribution&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Welcome to submit Issues and Pull Requests!&lt;/p&gt;
+&lt;h2 id=&#34;contact&#34;&gt;Contact &lt;a href=&#34;#contact&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Project Repository: &lt;a href=&#34;https://github.com/owu/aura-factory&#34;&gt;https://github.com/owu/aura-factory&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

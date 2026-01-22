@@ -1,140 +1,140 @@
 #!/bin/bash
 
 # Hugo static blog deployment script
-# 作者 https://owu.github.io
-# 版本 2025-12-26 20:00:00
+# Author https://owu.github.io
+# Version 2025-12-26 20:00:00
 
 SRC_DIR="/home/develop/owu.github.com"
 DST_DIR="/home/develop/owu.github.io"
 
-# 步骤1: 更新SOURCE仓库到main分支最新版本
-echo "正在更新 $SRC_DIR 仓库到最新版本..."
+# Step 1: Update SOURCE repository to latest main branch version
+echo "Updating $SRC_DIR repository to latest version..."
 cd "$SRC_DIR"
 git checkout main
 if [ $? -ne 0 ]; then
-    echo "切换到main分支失败"
+    echo "Failed to switch to main branch"
     exit 1
 fi
 
-# 重置本地更改，确保与远程仓库一致
+# Reset local changes to ensure consistency with remote repository
 git reset --hard
 if [ $? -ne 0 ]; then
-    echo "重置本地更改失败"
+    echo "Failed to reset local changes"
     exit 1
 fi
 
 git pull
 if [ $? -ne 0 ]; then
-    echo "拉取最新代码失败"
+    echo "Failed to pull latest code"
     exit 1
 fi
 
-# 步骤2: 进入blog目录，执行hugo生成静态博客
-echo "正在生成Hugo静态博客..."
+# Step 2: Navigate to blog directory and execute hugo to generate static blog
+echo "Generating Hugo static blog..."
 
 hugo build
 if [ $? -ne 0 ]; then
-    echo "Hugo生成失败"
+    echo "Hugo generation failed"
     exit 1
 fi
 
-# 步骤3: 使用git导出干净的public目录代码
-echo "正在导出public目录代码..."
+# Step 3: Use git to export clean public directory code
+echo "Exporting public directory code..."
 TEMP_DIR=$(mktemp -d)
 
-# 确保临时目录在退出时被清理
+# Ensure temporary directory is cleaned up on exit
 function cleanup {
     rm -rf "$TEMP_DIR"
 }
 trap cleanup EXIT
 
-# 导出public目录
+# Export public directory
 git archive --format=zip main public --output="$TEMP_DIR/public.zip"
 if [ $? -ne 0 ]; then
-    echo "导出public目录失败"
+    echo "Failed to export public directory"
     exit 1
 fi
 
-# 解压导出的zip文件
+# Extract the exported zip file
 unzip -q "$TEMP_DIR/public.zip" -d "$TEMP_DIR"
 if [ $? -ne 0 ]; then
-    echo "解压public.zip失败"
+    echo "Failed to extract public.zip"
     exit 1
 fi
 
-# 获取解压后的public目录
+# Get the extracted public directory
 EXTRACTED_PUBLIC="$TEMP_DIR/public"
 
-# 验证解压后的public目录是否存在且包含文件
+# Verify if extracted public directory exists and contains files
 if [ ! -d "$EXTRACTED_PUBLIC" ]; then
-    echo "错误：解压后未找到public目录"
+    echo "Error: Public directory not found after extraction"
     exit 1
 fi
 
-if [ -z "$(ls -A "$EXTRACTED_PUBLIC")" ]; then
-    echo "错误：public目录为空，没有内容可复制"
+if [ -z "$(ls -A \"$EXTRACTED_PUBLIC\")" ]; then
+    echo "Error: Public directory is empty, nothing to copy"
     exit 1
 fi
 
-# 步骤4: 进入DST_DIR目录，拉取最新代码
-echo "正在更新 $DST_DIR 仓库到最新版本..."
+# Step 4: Navigate to DST_DIR directory and pull latest code
+echo "Updating $DST_DIR repository to latest version..."
 cd "$DST_DIR"
 git checkout main
 if [ $? -ne 0 ]; then
-    echo "切换到main分支失败"
+    echo "Failed to switch to main branch"
     exit 1
 fi
 
 git pull
 if [ $? -ne 0 ]; then
-    echo "拉取最新代码失败"
+    echo "Failed to pull latest code"
     exit 1
 fi
 
-# 步骤5: 删除DST_DIR中除.git以外的所有文件和目录
-echo "正在清理 $DST_DIR 目录..."
+# Step 5: Delete all files and directories in DST_DIR except .git
+echo "Cleaning $DST_DIR directory..."
 find "$DST_DIR" -mindepth 1 -maxdepth 1 ! -name ".git" -exec rm -rf {} \;
 
-# 步骤6: 将导出的public目录内容复制到DST_DIR
-echo "正在将public目录内容复制到 $DST_DIR ..."
-# 使用cp命令的--preserve选项保留文件属性，并确保复制所有内容
+# Step 6: Copy exported public directory contents to DST_DIR
+echo "Copying public directory contents to $DST_DIR ..."
+# Use cp command with --preserve option to retain file attributes and ensure all content is copied
 cp -r --preserve=all "$EXTRACTED_PUBLIC"/. "$DST_DIR/"
 if [ $? -ne 0 ]; then
-    echo "复制public目录内容失败"
+    echo "Failed to copy public directory contents"
     exit 1
 fi
 
-# 验证目标目录是否包含复制的文件
-if [ -z "$(ls -A "$DST_DIR" 2>/dev/null)" ]; then
-    echo "错误：目标目录仍然为空，复制可能未成功"
+# Verify if target directory contains copied files
+if [ -z "$(ls -A \"$DST_DIR\" 2>/dev/null)" ]; then
+    echo "Error: Target directory is still empty, copy may have failed"
     exit 1
 fi
 
-# 步骤7: 清理临时目录
-echo "正在清理临时目录..."
+# Step 7: Clean up temporary directory
+echo "Cleaning temporary directory..."
 rm -rf "$TEMP_DIR"
 
-# 步骤8: 提交并推送到远程仓库
-echo "正在将变更提交到远程仓库..."
+# Step 8: Commit and push to remote repository
+echo "Committing changes to remote repository..."
 git add .
 if [ $? -ne 0 ]; then
-    echo "添加文件到暂存区失败"
+    echo "Failed to add files to staging area"
     exit 1
 fi
 
 git commit -m "Update blog content"
 if [ $? -ne 0 ]; then
-    echo "提交代码失败"
+    echo "Failed to commit code"
     exit 1
 fi
 
 git push
 if [ $? -ne 0 ]; then
-    echo "推送代码到远程仓库失败"
+    echo "Failed to push code to remote repository"
     exit 1
 fi
 
-# 步骤9: 返回原始目录
+# Step 9: Return to original directory
 cd "$SRC_DIR"
 
-echo "部署完成！"
+echo "Deployment completed!"

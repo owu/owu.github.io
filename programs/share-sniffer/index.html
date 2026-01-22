@@ -9,11 +9,11 @@
 
 <title>Share Sniffer Development Manual | owu.github.io</title>
 <link rel="canonical" href="https://owu.github.io/programs/share-sniffer/">
-<meta name="description" content="Share Sniffer（分享嗅探器）是一款跨平台的网盘分享链接检测工具，支持多种主流网盘的分享链接有效性检测。该工具提供了直观的图形界面（GUI）和便捷的命令行界面（CLI），方便用户根据需求选择使用方式。" />
+<meta name="description" content="Share Sniffer (Share Sniffer) is a cross-platform cloud storage sharing link detection tool that supports validity detection of sharing links from multiple mainstream cloud storage services. The tool provides an intuitive graphical interface (GUI) and a convenient command-line interface (CLI), allowing users to choose the usage method according to their needs." />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Share Sniffer Development Manual | owu.github.io" />
 <meta property="og:url" content="https://owu.github.io/programs/share-sniffer/" />
-<meta property="og:description" content="Share Sniffer（分享嗅探器）是一款跨平台的网盘分享链接检测工具，支持多种主流网盘的分享链接有效性检测。该工具提供了直观的图形界面（GUI）和便捷的命令行界面（CLI），方便用户根据需求选择使用方式。" />
+<meta property="og:description" content="Share Sniffer (Share Sniffer) is a cross-platform cloud storage sharing link detection tool that supports validity detection of sharing links from multiple mainstream cloud storage services. The tool provides an intuitive graphical interface (GUI) and a convenient command-line interface (CLI), allowing users to choose the usage method according to their needs." />
 
 
 
@@ -67,10 +67,10 @@
     <div class="tip">
         <time datetime="2025-12-24 20:00:00 &#43;0800 CST">2025/12/24</time>
         <span class="split">·</span>
-        <span> 5112 words </span>
+        <span> 4309 words </span>
         <span class="split">·</span>
         <span>
-            11 minutes to read
+            9 minutes to read
         </span>
     </div>
 
@@ -99,77 +99,77 @@
     <hr />
 
     <div class="content">
-        <p>Share Sniffer（分享嗅探器）是一款跨平台的网盘分享链接检测工具，支持多种主流网盘的分享链接有效性检测。该工具提供了直观的图形界面（GUI）和便捷的命令行界面（CLI），方便用户根据需求选择使用方式。</p>
-<h2 id="1-项目概况">1. 项目概况 <a href="#1-%e9%a1%b9%e7%9b%ae%e6%a6%82%e5%86%b5" class="anchor">🔗</a></h2><h3 id="11-支持的网盘类型">1.1 支持的网盘类型 <a href="#11-%e6%94%af%e6%8c%81%e7%9a%84%e7%bd%91%e7%9b%98%e7%b1%bb%e5%9e%8b" class="anchor">🔗</a></h3><ul>
-<li>✅ 夸克网盘</li>
-<li>✅ 天翼云盘</li>
-<li>✅ 百度网盘</li>
-<li>✅ 阿里云盘</li>
-<li>✅ 115网盘</li>
-<li>✅ 123云盘</li>
-<li>✅ UC网盘</li>
-<li>✅ 迅雷云盘</li>
-<li>✅ 移动云盘(139云盘)</li>
+        <p>Share Sniffer (Share Sniffer) is a cross-platform cloud storage sharing link detection tool that supports validity detection of sharing links from multiple mainstream cloud storage services. The tool provides an intuitive graphical interface (GUI) and a convenient command-line interface (CLI), allowing users to choose the usage method according to their needs.</p>
+<h2 id="1-project-overview">1. Project Overview <a href="#1-project-overview" class="anchor">🔗</a></h2><h3 id="11-supported-cloud-storage-types">1.1 Supported Cloud Storage Types <a href="#11-supported-cloud-storage-types" class="anchor">🔗</a></h3><ul>
+<li>✅ Quark Cloud Storage</li>
+<li>✅ China Telecom Cloud Storage</li>
+<li>✅ Baidu Netdisk</li>
+<li>✅ Alibaba Cloud Drive</li>
+<li>✅ 115 Cloud Storage</li>
+<li>✅ 123 Cloud Storage</li>
+<li>✅ UC Cloud Storage</li>
+<li>✅ Xunlei Cloud Storage</li>
+<li>✅ China Mobile Cloud Storage (139 Cloud Storage)</li>
 </ul>
-<h3 id="12-技术栈">1.2 技术栈 <a href="#12-%e6%8a%80%e6%9c%af%e6%a0%88" class="anchor">🔗</a></h3><ul>
-<li><strong>开发语言</strong>：Go 1.25</li>
-<li><strong>GUI框架</strong>：<a href="https://fyne.io/">fyne.io/fyne/v2</a> - 跨平台GUI框架，支持Android平台</li>
-<li><strong>CLI框架</strong>：<a href="https://github.com/spf13/cobra">github.com/spf13/cobra</a> - 命令行框架</li>
-<li><strong>HTTP客户端</strong>：自定义封装的HTTP客户端，支持重试和超时控制</li>
-<li><strong>并发模型</strong>：工作池（WorkerPool）模式，支持并发任务处理</li>
-<li><strong>浏览器自动化</strong>：<a href="https://github.com/chromedp/chromedp">chromedp</a> - 用于动态页面内容提取</li>
-<li><strong>对话框库</strong>：<a href="https://github.com/sqweek/dialog">sqweek/dialog</a> - 桌面端文件选择对话框</li>
-<li><strong>日志系统</strong>：自定义日志框架，支持多级别日志输出</li>
+<h3 id="12-technology-stack">1.2 Technology Stack <a href="#12-technology-stack" class="anchor">🔗</a></h3><ul>
+<li><strong>Development Language</strong>: Go 1.25</li>
+<li><strong>GUI Framework</strong>: <a href="https://fyne.io/">fyne.io/fyne/v2</a> - Cross-platform GUI framework, supports Android platform</li>
+<li><strong>CLI Framework</strong>: <a href="https://github.com/spf13/cobra">github.com/spf13/cobra</a> - Command-line framework</li>
+<li><strong>HTTP Client</strong>: Custom encapsulated HTTP client, supports retry and timeout control</li>
+<li><strong>Concurrency Model</strong>: WorkerPool pattern, supports concurrent task processing</li>
+<li><strong>Browser Automation</strong>: <a href="https://github.com/chromedp/chromedp">chromedp</a> - Used for dynamic page content extraction</li>
+<li><strong>Dialog Library</strong>: <a href="https://github.com/sqweek/dialog">sqweek/dialog</a> - Desktop file selection dialog</li>
+<li><strong>Log System</strong>: Custom logging framework, supports multi-level log output</li>
 </ul>
-<h2 id="2-项目结构">2. 项目结构 <a href="#2-%e9%a1%b9%e7%9b%ae%e7%bb%93%e6%9e%84" class="anchor">🔗</a></h2><pre tabindex="0"><code>share-sniffer/
-├── build/                  # 构建脚本和测试用例
-│   ├── scripts/           # 自动化构建脚本
-│   └── testcases/         # 测试用例
-├── internal/              # 内部包
-│   ├── app/               # 应用程序核心逻辑
-│   ├── cmd/               # CLI命令行实现
-│   ├── config/            # 配置管理
-│   ├── core/              # 核心检测逻辑
-│   ├── errors/            # 错误处理
-│   ├── http/              # HTTP客户端封装
-│   ├── logger/            # 日志记录
-│   ├── ui/                # GUI界面实现
-│   ├── utils/             # 工具函数
-│   └── workerpool/        # 工作池实现
-├── launcher/              # 启动器
-│   ├── cli/               # CLI入口
-│   └── gui/               # GUI入口
-├── screenshot/            # 截图
-├── static/                # 静态资源
-├── .gitignore             # Git忽略文件
-├── LICENSE                # 许可证
-├── README.md              # 项目说明
-├── README_en.md           # 英文说明
-├── README_jp.md           # 日文说明
-├── go.mod                 # Go模块依赖
-└── go.sum                 # 依赖校验和
-</code></pre><h2 id="3-核心模块设计">3. 核心模块设计 <a href="#3-%e6%a0%b8%e5%bf%83%e6%a8%a1%e5%9d%97%e8%ae%be%e8%ae%a1" class="anchor">🔗</a></h2><h3 id="31-应用程序架构app">3.1 应用程序架构（app） <a href="#31-%e5%ba%94%e7%94%a8%e7%a8%8b%e5%ba%8f%e6%9e%b6%e6%9e%84app" class="anchor">🔗</a></h3><p>应用程序模块采用分层架构设计，实现了GUI和CLI的统一启动入口。主要包含以下组件：</p>
-<h4 id="311-sharesnifferapp结构体">3.1.1 ShareSnifferApp结构体 <a href="#311-sharesnifferapp%e7%bb%93%e6%9e%84%e4%bd%93" class="anchor">🔗</a></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span><span class="w"> </span><span class="nx">ShareSnifferApp</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">app</span><span class="w">    </span><span class="nx">fyne</span><span class="p">.</span><span class="nx">App</span><span class="w">      </span><span class="c1">// Fyne应用实例</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">window</span><span class="w"> </span><span class="nx">fyne</span><span class="p">.</span><span class="nx">Window</span><span class="w">   </span><span class="c1">// 主窗口</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">state</span><span class="w">  </span><span class="o">*</span><span class="nx">state</span><span class="p">.</span><span class="nx">AppState</span><span class="w"> </span><span class="c1">// 应用状态</span><span class="w">
+<h2 id="2-project-structure">2. Project Structure <a href="#2-project-structure" class="anchor">🔗</a></h2><pre tabindex="0"><code>share-sniffer/
+├── build/                  # Build scripts and test cases
+│   ├── scripts/           # Automated build scripts
+│   └── testcases/         # Test cases
+├── internal/              # Internal packages
+│   ├── app/               # Application core logic
+│   ├── cmd/               # CLI command implementation
+│   ├── config/            # Configuration management
+│   ├── core/              # Core detection logic
+│   ├── errors/            # Error handling
+│   ├── http/              # HTTP client encapsulation
+│   ├── logger/            # Logging
+│   ├── ui/                # GUI interface implementation
+│   ├── utils/             # Utility functions
+│   └── workerpool/        # Worker pool implementation
+├── launcher/              # Launcher
+│   ├── cli/               # CLI entry
+│   └── gui/               # GUI entry
+├── screenshot/            # Screenshots
+├── static/                # Static resources
+├── .gitignore             # Git ignore file
+├── LICENSE                # License
+├── README.md              # Project description
+├── README_en.md           # English description
+├── README_jp.md           # Japanese description
+├── go.mod                 # Go module dependencies
+└── go.sum                 # Dependency checksum
+</code></pre><h2 id="3-core-module-design">3. Core Module Design <a href="#3-core-module-design" class="anchor">🔗</a></h2><h3 id="31-application-architecture-app">3.1 Application Architecture (app) <a href="#31-application-architecture-app" class="anchor">🔗</a></h3><p>The application module adopts a layered architecture design, implementing a unified startup entry for both GUI and CLI. Mainly includes the following components:</p>
+<h4 id="311-sharesnifferapp-structure">3.1.1 ShareSnifferApp Structure <a href="#311-sharesnifferapp-structure" class="anchor">🔗</a></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span><span class="w"> </span><span class="nx">ShareSnifferApp</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">app</span><span class="w">    </span><span class="nx">fyne</span><span class="p">.</span><span class="nx">App</span><span class="w">      </span><span class="c1">// Fyne application instance</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">window</span><span class="w"> </span><span class="nx">fyne</span><span class="p">.</span><span class="nx">Window</span><span class="w">   </span><span class="c1">// Main window</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">state</span><span class="w">  </span><span class="o">*</span><span class="nx">state</span><span class="p">.</span><span class="nx">AppState</span><span class="w"> </span><span class="c1">// Application state</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><h4 id="312-应用启动流程">3.1.2 应用启动流程 <a href="#312-%e5%ba%94%e7%94%a8%e5%90%af%e5%8a%a8%e6%b5%81%e7%a8%8b" class="anchor">🔗</a></h4><ol>
-<li><strong>配置初始化</strong>：从全局配置单例获取应用配置</li>
-<li><strong>Fyne应用创建</strong>：使用<code>app.NewWithID()</code>创建应用实例</li>
-<li><strong>窗口配置</strong>：设置窗口大小、位置和标题</li>
-<li><strong>UI内容创建</strong>：构建标签页界面（检查页和关于页）</li>
-<li><strong>后台任务启动</strong>：时间同步和版本检查</li>
-<li><strong>事件循环启动</strong>：显示窗口并进入主事件循环</li>
+</span></span></span></code></pre></div><h4 id="312-application-startup-process">3.1.2 Application Startup Process <a href="#312-application-startup-process" class="anchor">🔗</a></h4><ol>
+<li><strong>Configuration Initialization</strong>: Get application configuration from global configuration singleton</li>
+<li><strong>Fyne Application Creation</strong>: Create application instance using <code>app.NewWithID()</code></li>
+<li><strong>Window Configuration</strong>: Set window size, position, and title</li>
+<li><strong>UI Content Creation</strong>: Build tab interface (check page and about page)</li>
+<li><strong>Background Task Startup</strong>: Time synchronization and version checking</li>
+<li><strong>Event Loop Startup</strong>: Display window and enter main event loop</li>
 </ol>
-<h4 id="313-平台适配">3.1.3 平台适配 <a href="#313-%e5%b9%b3%e5%8f%b0%e9%80%82%e9%85%8d" class="anchor">🔗</a></h4><ul>
-<li><strong>桌面平台</strong>：使用sqweek/dialog提供原生文件选择对话框</li>
-<li><strong>Android平台</strong>：使用Fyne原生对话框，避免调用桌面专用API</li>
+<h4 id="313-platform-adaptation">3.1.3 Platform Adaptation <a href="#313-platform-adaptation" class="anchor">🔗</a></h4><ul>
+<li><strong>Desktop Platform</strong>: Use sqweek/dialog to provide native file selection dialog</li>
+<li><strong>Android Platform</strong>: Use Fyne native dialog, avoid calling desktop-specific APIs</li>
 </ul>
-<h3 id="32-配置管理config">3.2 配置管理（config） <a href="#32-%e9%85%8d%e7%bd%ae%e7%ae%a1%e7%90%86config" class="anchor">🔗</a></h3><p>配置管理模块采用单例模式实现，提供全局配置访问。配置包含HTTP客户端配置、检测配置、应用信息和支持的链接类型等。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// Config 应用配置结构</span><span class="w">
+<h3 id="32-configuration-management-config">3.2 Configuration Management (config) <a href="#32-configuration-management-config" class="anchor">🔗</a></h3><p>The configuration management module is implemented using the singleton pattern, providing global configuration access. The configuration includes HTTP client configuration, detection configuration, application information, and supported link types.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// Config application configuration structure</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="kd">type</span><span class="w"> </span><span class="nx">Config</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// HTTP客户端配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// HTTP client configuration</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">HTTPClientConfig</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">Timeout</span><span class="w">             </span><span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">MaxIdleConns</span><span class="w">        </span><span class="kt">int</span><span class="w">
@@ -178,17 +178,17 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">RetryCount</span><span class="w">          </span><span class="kt">int</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 检测配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Detection configuration</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">CheckConfig</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">MaxConcurrentTasks</span><span class="w"> </span><span class="kt">int</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">DefaultTimeout</span><span class="w">     </span><span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">RetryInterval</span><span class="w">      </span><span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 长耗时任务配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Long-running task configuration</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">LongTimeout</span><span class="w">       </span><span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">LongMaxConcurrent</span><span class="w"> </span><span class="kt">int</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 应用信息</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Application information</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">AppInfo</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">Version</span><span class="w">        </span><span class="kt">string</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">AppName</span><span class="w">        </span><span class="kt">string</span><span class="w">
@@ -196,7 +196,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">ExpirationDate</span><span class="w"> </span><span class="kt">int64</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 支持的链接类型</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Supported link types</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">SupportedLinkTypes</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">AllLinks</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">Quark</span><span class="w">    </span><span class="p">[]</span><span class="kt">string</span><span class="w">
@@ -209,34 +209,34 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">Xunlei</span><span class="w">   </span><span class="p">[]</span><span class="kt">string</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><h3 id="32-核心检测逻辑core">3.2 核心检测逻辑（core） <a href="#32-%e6%a0%b8%e5%bf%83%e6%a3%80%e6%b5%8b%e9%80%bb%e8%be%91core" class="anchor">🔗</a></h3><p>核心检测逻辑采用策略模式和工厂模式的组合设计，支持动态添加新的网盘检查器。</p>
-<h4 id="321-接口设计">3.2.1 接口设计 <a href="#321-%e6%8e%a5%e5%8f%a3%e8%ae%be%e8%ae%a1" class="anchor">🔗</a></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// LinkChecker 链接检查器接口</span><span class="w">
+</span></span></span></code></pre></div><h3 id="33-core-detection-logic-core">3.3 Core Detection Logic (core) <a href="#33-core-detection-logic-core" class="anchor">🔗</a></h3><p>The core detection logic adopts a combination design of strategy pattern and factory pattern, supporting dynamic addition of new cloud storage checkers.</p>
+<h4 id="331-interface-design">3.3.1 Interface Design <a href="#331-interface-design" class="anchor">🔗</a></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// LinkChecker link checker interface</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="kd">type</span><span class="w"> </span><span class="nx">LinkChecker</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Check 检查链接有效性</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Check checks link validity</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nf">Check</span><span class="p">(</span><span class="nx">ctx</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">Context</span><span class="p">,</span><span class="w"> </span><span class="nx">urlStr</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">Result</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// GetPrefix 获取支持的链接前缀列表</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// GetPrefix gets supported link prefix list</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nf">GetPrefix</span><span class="p">()</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><h4 id="322-注册机制">3.2.2 注册机制 <a href="#322-%e6%b3%a8%e5%86%8c%e6%9c%ba%e5%88%b6" class="anchor">🔗</a></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// RegisterChecker 注册链接检查器</span><span class="w">
+</span></span></span></code></pre></div><h4 id="332-registration-mechanism">3.3.2 Registration Mechanism <a href="#332-registration-mechanism" class="anchor">🔗</a></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// RegisterChecker registers link checker</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">RegisterChecker</span><span class="p">(</span><span class="nx">checker</span><span class="w"> </span><span class="nx">LinkChecker</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">prefixes</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">checker</span><span class="p">.</span><span class="nf">GetPrefix</span><span class="p">()</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">prefix</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">prefixes</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">checkers</span><span class="p">[</span><span class="nx">prefix</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">checker</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">logger</span><span class="p">.</span><span class="nf">Debug</span><span class="p">(</span><span class="s">&#34;LinkChecker:注册检查器,%s&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">prefix</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">logger</span><span class="p">.</span><span class="nf">Debug</span><span class="p">(</span><span class="s">&#34;LinkChecker:Register checker,%s&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">prefix</span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><h4 id="323-适配器模式">3.2.3 适配器模式 <a href="#323-%e9%80%82%e9%85%8d%e5%99%a8%e6%a8%a1%e5%bc%8f" class="anchor">🔗</a></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// Adapter 适配器函数，根据URL前缀调用对应的检查器</span><span class="w">
+</span></span></span></code></pre></div><h4 id="333-adapter-pattern">3.3.3 Adapter Pattern <a href="#333-adapter-pattern" class="anchor">🔗</a></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// Adapter adapter function, calls corresponding checker based on URL prefix</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">Adapter</span><span class="p">(</span><span class="nx">ctx</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">Context</span><span class="p">,</span><span class="w"> </span><span class="nx">urlStr</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">Result</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 输入验证</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Input validation</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="s">&#34;&#34;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">urlStr</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nf">ErrorMalformed</span><span class="p">(</span><span class="nx">urlStr</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;链接不能为空&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nf">ErrorMalformed</span><span class="p">(</span><span class="nx">urlStr</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Link cannot be empty&#34;</span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 获取对应的检查器</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Get corresponding checker</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">checker</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nf">GetChecker</span><span class="p">(</span><span class="nx">urlStr</span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">checker</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nf">ErrorMalformed</span><span class="p">(</span><span class="nx">urlStr</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;链接尚未支持&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nf">ErrorMalformed</span><span class="p">(</span><span class="nx">urlStr</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Link not yet supported&#34;</span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">startTime</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nf">Now</span><span class="p">()</span><span class="w">
@@ -247,20 +247,20 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><h4 id="324-检查器实现示例夸克网盘">3.2.4 检查器实现示例（夸克网盘） <a href="#324-%e6%a3%80%e6%9f%a5%e5%99%a8%e5%ae%9e%e7%8e%b0%e7%a4%ba%e4%be%8b%e5%a4%b8%e5%85%8b%e7%bd%91%e7%9b%98" class="anchor">🔗</a></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// QuarkChecker 夸克网盘链接检查器</span><span class="w">
+</span></span></span></code></pre></div><h4 id="334-checker-implementation-example-quark-cloud-storage">3.3.4 Checker Implementation Example (Quark Cloud Storage) <a href="#334-checker-implementation-example-quark-cloud-storage" class="anchor">🔗</a></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// QuarkChecker Quark Cloud Storage link checker</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="kd">type</span><span class="w"> </span><span class="nx">QuarkChecker</span><span class="w"> </span><span class="kd">struct</span><span class="p">{}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="c1">// Check 实现LinkChecker接口的Check方法</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Check implements LinkChecker interface&#39;s Check method</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">q</span><span class="w"> </span><span class="o">*</span><span class="nx">QuarkChecker</span><span class="p">)</span><span class="w"> </span><span class="nf">Check</span><span class="p">(</span><span class="nx">ctx</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">Context</span><span class="p">,</span><span class="w"> </span><span class="nx">urlStr</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">Result</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">q</span><span class="p">.</span><span class="nf">checkQuark</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="nx">urlStr</span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="c1">// GetPrefix 实现LinkChecker接口的GetPrefix方法</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// GetPrefix implements LinkChecker interface&#39;s GetPrefix method</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">q</span><span class="w"> </span><span class="o">*</span><span class="nx">QuarkChecker</span><span class="p">)</span><span class="w"> </span><span class="nf">GetPrefix</span><span class="p">()</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nf">GetSupportedQuark</span><span class="p">()</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><h3 id="33-工作池workerpool">3.3 工作池（workerpool） <a href="#33-%e5%b7%a5%e4%bd%9c%e6%b1%a0workerpool" class="anchor">🔗</a></h3><p>工作池模块实现了并发任务处理，支持普通任务和长耗时任务的并发控制，提高检测效率。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// WorkerPool 工作池结构</span><span class="w">
+</span></span></span></code></pre></div><h3 id="34-worker-pool-workerpool">3.4 Worker Pool (workerpool) <a href="#34-worker-pool-workerpool" class="anchor">🔗</a></h3><p>The worker pool module implements concurrent task processing, supporting concurrency control for regular tasks and long-running tasks, improving detection efficiency.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// WorkerPool worker pool structure</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="kd">type</span><span class="w"> </span><span class="nx">WorkerPool</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">workers</span><span class="w">           </span><span class="kt">int</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">queueSize</span><span class="w">         </span><span class="kt">int</span><span class="w">
@@ -269,19 +269,19 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">wg</span><span class="w">                </span><span class="nx">sync</span><span class="p">.</span><span class="nx">WaitGroup</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">ctx</span><span class="w">               </span><span class="nx">context</span><span class="p">.</span><span class="nx">Context</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">cancel</span><span class="w">            </span><span class="nx">context</span><span class="p">.</span><span class="nx">CancelFunc</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 长耗时任务并发控制</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Long-running task concurrency control</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">longTaskSemaphore</span><span class="w">   </span><span class="kd">chan</span><span class="w"> </span><span class="kd">struct</span><span class="p">{}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">maxLongConcurrent</span><span class="w"> </span><span class="kt">int</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><p>工作池支持以下功能：</p>
+</span></span></span></code></pre></div><p>The worker pool supports the following functions:</p>
 <ul>
-<li>并发任务处理</li>
-<li>长耗时任务并发控制</li>
-<li>任务超时和取消</li>
-<li>结果收集</li>
+<li>Concurrent task processing</li>
+<li>Long-running task concurrency control</li>
+<li>Task timeout and cancellation</li>
+<li>Result collection</li>
 </ul>
-<h3 id="34-http客户端http">3.4 HTTP客户端（http） <a href="#34-http%e5%ae%a2%e6%88%b7%e7%ab%afhttp" class="anchor">🔗</a></h3><p>HTTP客户端模块封装了网络请求处理，支持重试、超时控制和错误处理。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// DoWithRetry 执行HTTP请求并支持重试</span><span class="w">
+<h3 id="35-http-client-http">3.5 HTTP Client (http) <a href="#35-http-client-http" class="anchor">🔗</a></h3><p>The HTTP client module encapsulates network request processing, supporting retry, timeout control, and error handling.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// DoWithRetry executes HTTP request with retry support</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">DoWithRetry</span><span class="p">(</span><span class="nx">ctx</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">Context</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">,</span><span class="w"> </span><span class="nx">maxRetries</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Response</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 实现重试逻辑</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
@@ -684,7 +684,6 @@ func (q *ShareSnifferApp) createContent() fyne.CanvasObject {
 </span></span></code></pre></div><h2 id="10-许可证">10. 许可证 <a href="#10-%e8%ae%b8%e5%8f%af%e8%af%81" class="anchor">🔗</a></h2><p><a href="LICENSE">GNU GPL v3 License</a></p>
 <h2 id="11-贡献">11. 贡献 <a href="#11-%e8%b4%a1%e7%8c%ae" class="anchor">🔗</a></h2><p>欢迎提交Issue和Pull Request！</p>
 <h2 id="12-联系方式">12. 联系方式 <a href="#12-%e8%81%94%e7%b3%bb%e6%96%b9%e5%bc%8f" class="anchor">🔗</a></h2><p>项目地址：<a href="https://github.com/owu/share-sniffer">https://github.com/owu/share-sniffer</a></p>
-
     </div>
 
     
