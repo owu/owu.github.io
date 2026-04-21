@@ -1,0 +1,48 @@
+Privacy Policy
+
+Effective Date: 2026-01-20
+
+This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the "WSLDashboard" (the "App") for Windows, and tells You about Your privacy rights and how the law protects You.
+
+By using the App, You agree to the collection and use of information in accordance with this Privacy Policy.
+
+1. Information We Collect
+   We collect the following types of information to provide and improve our service to you:
+
+   a) Diagnostic Data (Crash Logs & Performance)
+      - When the App crashes or encounters performance issues, we may collect anonymous diagnostic data related to the event, such as the stack trace, error code, and the state of the app at the time of the crash. This data is used solely for debugging and stability improvements. It does not contain personal information.
+
+   b) Basic Usage Data
+      - We collect aggregated, anonymous usage statistics, such as which features are most used, session duration, and general interaction with the app. This data helps us understand how to improve the App and prioritize new features. It cannot be used to identify you personally.
+
+   c) Device Information
+      - We may collect generic, non-personal device information, such as your Windows operating system version, device architecture (x64, ARM), and system language. This information helps us ensure compatibility and optimize performance for your specific configuration.
+
+2. Purpose of Data Collection
+   The data we collect is used for the following purposes:
+   - To ensure the stability and reliability of the App by identifying and fixing crashes.
+   - To understand how the App is used and to guide future development and feature improvements.
+   - To provide and maintain the core functionality of the App.
+
+3. How We Use Your Information
+   We do NOT:
+   - Sell, rent, or lease your personal data to third parties.
+   - Use your data for targeted advertising or behavioral profiling.
+   - Collect personal information such as your name, email address, location, or files unless explicitly required for a core feature (which is not the case for this App as described).
+
+4. Data Storage and Security
+   The diagnostic and usage data we collect is processed and stored anonymously on secure servers. We implement commercially acceptable technical and organizational measures to protect the data we collect. However, no method of electronic transmission or storage is 100% secure, and we cannot guarantee absolute security.
+
+5. Third-Party Services
+   The App may rely on third-party services, such as Microsoft's App Services for crash reporting or analytics. These providers have access to the anonymous data mentioned above only to perform tasks on our behalf and are obligated not to disclose or use it for any other purpose.
+
+6. Your Rights
+   As we do not collect personal identifiable information, the scope of data subject rights is limited. However, you can:
+   - Opt-out of diagnostic data collection. This can usually be done within the App's settings or through your Windows privacy settings. Note that opting out may limit our ability to help resolve technical issues you encounter.
+   - Contact us to request information about the anonymous data associated with your installation, to the extent technically feasible.
+
+7. Updates to This Privacy Policy
+   We may update Our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top. You are advised to review this Privacy Policy periodically for any changes. Changes are effective when they are posted on this page.
+
+8. Contact Us
+   If you have any questions about this Privacy Policy, You can contact us by email at: guardcalf@gmail.com
